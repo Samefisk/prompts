@@ -46,6 +46,7 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
+- 2026-02-16: No rule change (runtime trigger-boundary fix in automation script; no new durable prompt-edit preference introduced).
 - 2026-02-16: No rule change (runtime hotkey trigger behavior fix; no new durable prompt-edit preference introduced).
 - 2026-02-16: No rule change (runtime warning fix in automation script; no new durable prompt-edit preference introduced).
 - 2026-02-16: When onboarding documentation should be front-and-center in the repo, mirror the onboarding doc into `README.md` for zero-discovery setup.

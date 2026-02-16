@@ -8,8 +8,7 @@ if ([string]::IsNullOrWhiteSpace($apiKey)) {
 
 $promptUrl = $env:SUPER_PROMPT_URL
 if ([string]::IsNullOrWhiteSpace($promptUrl)) {
-  # Replace this with your raw GitHub URL after publishing.
-  $promptUrl = 'https://raw.githubusercontent.com/REPLACE_ME/REPLACE_ME/main/super.json'
+  $promptUrl = 'https://raw.githubusercontent.com/Samefisk/prompts/main/super.json'
 }
 
 $model = $env:OPENAI_MODEL

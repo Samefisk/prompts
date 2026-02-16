@@ -46,6 +46,7 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
+- 2026-02-16: No rule change (execution request to run push/auth flow; no new durable prompt-edit preference introduced).
 - 2026-02-16: For distribution/onboarding requests, provide beginner-friendly Git steps and copy-paste commands; avoid assuming prior Git experience.
 - 2026-02-15: Established deterministic prompt-edit workflow for `super.json`; prioritize rule-level changes over examples.
 - 2026-02-15: Enforced formal Type 2 premise tone (`and thus`/`therefore`/`allowing ...`) and avoid informal `so` by default.

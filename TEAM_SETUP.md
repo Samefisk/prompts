@@ -2,42 +2,22 @@
 
 This setup gives your team a shared, always-latest `super.json` and a Windows `,ct` shortcut.
 
-## 1) Publish this folder to GitHub (first time)
+## 1) Repo and prompt URL
 
-### A. Create a GitHub repo in browser
-1. Go to https://github.com/new
-2. Repository name: `superwhisper-modes` (or any name you want)
-3. Visibility: Public
-4. Do not add README/gitignore/license on GitHub for this first push
-5. Click **Create repository**
+Repo:
+`https://github.com/Samefisk/prompts`
 
-### B. Run these commands in this folder
-Open Terminal in:
-`/Users/christofferandersen/Documents/superwhisper/modes`
-
-Replace `<YOUR_GITHUB_USERNAME>` and `<YOUR_REPO_NAME>` first.
-
-```bash
-git init
-git branch -M main
-git add .
-git commit -m "Initial team-sharing setup"
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>.git
-git push -u origin main
-```
-
-After that, your shared prompt URL is:
-
-`https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/main/super.json`
+Raw prompt URL (latest on every push):
+`https://raw.githubusercontent.com/Samefisk/prompts/main/super.json`
 
 ## 2) Your update workflow (so team always has latest)
 
 Whenever you change `super.json`:
 
 ```bash
-git add super.json
-git commit -m "Update super prompt"
-git push
+git -C /Users/christofferandersen/Documents/superwhisper/modes add super.json
+git -C /Users/christofferandersen/Documents/superwhisper/modes commit -m "Update super prompt"
+git -C /Users/christofferandersen/Documents/superwhisper/modes push
 ```
 
 Teammates do not need to pull git changes for prompt content if their script downloads from the raw URL each run.
@@ -57,11 +37,11 @@ Put both in the same folder, for example:
 `C:\superwhisper\`
 
 ### C. Set environment variables in PowerShell
-Open PowerShell and run (replace values):
+Open PowerShell and run (replace only API key):
 
 ```powershell
 setx OPENAI_API_KEY "<YOUR_OPENAI_API_KEY>"
-setx SUPER_PROMPT_URL "https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/main/super.json"
+setx SUPER_PROMPT_URL "https://raw.githubusercontent.com/Samefisk/prompts/main/super.json"
 setx OPENAI_MODEL "gpt-4.1-mini"
 ```
 
@@ -84,7 +64,7 @@ In any text input field:
 - Error about API key:
   - Verify `OPENAI_API_KEY` was set and app was reopened.
 - Error about prompt URL:
-  - Open `SUPER_PROMPT_URL` in browser and confirm `super.json` loads.
+  - Open the raw URL in browser and confirm `super.json` loads.
 - No replacement text:
   - Confirm there is text in the field before typing `,ct`.
 - First run is slow:

@@ -1,3 +1,7 @@
+param(
+  [string]$ConfigPath
+)
+
 $ErrorActionPreference = 'Stop'
 
 $logFile = "$env:TEMP\ct_gemini_debug.log"
@@ -9,27 +13,55 @@ function Write-DebugLog {
 Write-DebugLog '========================================'
 Write-DebugLog 'Script started.'
 
-$apiKey = $env:GEMINI_API_KEY
+if ([string]::IsNullOrWhiteSpace($ConfigPath)) {
+  $ConfigPath = Join-Path $PSScriptRoot 'ct-config.json'
+}
+
+$config = $null
+if (Test-Path -LiteralPath $ConfigPath) {
+  try {
+    $configRaw = Get-Content -LiteralPath $ConfigPath -Raw
+    $config = $configRaw | ConvertFrom-Json
+  } catch {
+    Write-Error "Config parse failed: $ConfigPath"
+    Write-DebugLog "CRITICAL: Config parse failed: $ConfigPath"
+    exit 1
+  }
+}
+
+$apiKey = if ($null -ne $config) { $config.api_key } else { $null }
+if ([string]::IsNullOrWhiteSpace($apiKey)) {
+  $apiKey = $env:GEMINI_API_KEY
+}
 if ([string]::IsNullOrWhiteSpace($apiKey)) {
   $apiKey = $env:GOOGLE_API_KEY
 }
 if ([string]::IsNullOrWhiteSpace($apiKey)) {
-  Write-Error 'GEMINI_API_KEY (or GOOGLE_API_KEY) is not set.'
+  Write-Error 'Gemini API key missing. Run setup_ct.ahk or set GEMINI_API_KEY.'
   Write-DebugLog 'CRITICAL: API key empty.'
   exit 1
 }
 
-$promptUrl = $env:SUPER_PROMPT_URL
+$promptUrl = if ($null -ne $config) { $config.prompt_url } else { $null }
+if ([string]::IsNullOrWhiteSpace($promptUrl)) {
+  $promptUrl = $env:SUPER_PROMPT_URL
+}
 if ([string]::IsNullOrWhiteSpace($promptUrl)) {
   $promptUrl = 'https://raw.githubusercontent.com/Samefisk/prompts/main/super-prompt.md'
 }
 
-$model = $env:GEMINI_MODEL
+$model = if ($null -ne $config) { $config.model } else { $null }
+if ([string]::IsNullOrWhiteSpace($model)) {
+  $model = $env:GEMINI_MODEL
+}
 if ([string]::IsNullOrWhiteSpace($model)) {
   $model = 'gemini-3-pro-preview'
 }
 
-$thinkingLevel = $env:GEMINI_THINKING_LEVEL
+$thinkingLevel = if ($null -ne $config) { $config.thinking_level } else { $null }
+if ([string]::IsNullOrWhiteSpace($thinkingLevel)) {
+  $thinkingLevel = $env:GEMINI_THINKING_LEVEL
+}
 if ([string]::IsNullOrWhiteSpace($thinkingLevel)) {
   $thinkingLevel = 'LOW'
 } else {

@@ -46,6 +46,7 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
+- 2026-02-16: Prefer no-terminal teammate onboarding when requested: provide click-through setup scripts, local config files, and docs that avoid shell commands for end users.
 - 2026-02-16: For team-facing prompt distribution, prefer publishing an isolated prompt artifact (`.md`) derived from mode JSON rather than sharing the full JSON file; keep automation/docs aligned to the artifact URL.
 - 2026-02-16: When adapting teammate automation tooling, mirror the user-provided reference script structure and provider defaults; encode explicit model/reasoning requirements as defaults in implementation docs and scripts.
 - 2026-02-16: No rule change (execution request to run push/auth flow; no new durable prompt-edit preference introduced).

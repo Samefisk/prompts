@@ -1,79 +1,66 @@
-# Team Setup: Shared `super-prompt.md` + Windows `,ct`
+# Team Setup: No-Terminal Windows Onboarding (`super-prompt.md` + `,ct`)
 
-This setup gives your team a shared, always-latest prompt Markdown file and a Windows `,ct` shortcut.
+This setup avoids terminal use for teammates.
+They only install AutoHotkey, download files, run one setup script, and use `,ct`.
 
-## 1) Repo and prompt URL
+## 1) Team links
 
 Repo:
 `https://github.com/Samefisk/prompts`
 
-Raw prompt URL (latest on every push):
+Raw prompt URL (always latest):
 `https://raw.githubusercontent.com/Samefisk/prompts/main/super-prompt.md`
 
-## 2) Your update workflow (so team always has latest)
+## 2) Your maintainer workflow
 
-Whenever you change `super.json`:
+When you update `super.json`, push to `main`.
+`super-prompt.md` is auto-generated from `super.json` by GitHub Actions.
 
-```bash
-git -C /Users/christofferandersen/Documents/superwhisper/modes add super.json
-git -C /Users/christofferandersen/Documents/superwhisper/modes commit -m "Update super prompt"
-git -C /Users/christofferandersen/Documents/superwhisper/modes push
-```
+## 3) Teammate onboarding (no terminal)
 
-`super-prompt.md` is auto-generated from `super.json` by GitHub Actions after push.
-Teammates do not need to pull git changes for prompt content if their script downloads from the raw URL each run.
+### A. Install AutoHotkey
+1. Go to https://www.autohotkey.com/
+2. Install AutoHotkey v2
 
-## 3) Windows teammate install
+### B. Download the package
+1. Open `https://github.com/Samefisk/prompts`
+2. Click **Code** -> **Download ZIP**
+3. Extract ZIP
+4. Open the `windows` folder
 
-### A. Install requirements
-1. Install AutoHotkey v2: https://www.autohotkey.com/
-2. Confirm PowerShell is available (default on Windows)
+### C. Run one-time setup wizard
+1. Double-click `setup_ct.ahk`
+2. Paste Gemini API key when prompted
+3. Press OK on defaults unless you want custom values
 
-### B. Copy files to Windows machine
-Copy both files from this repo:
-- `windows/ct.ahk`
-- `windows/ct.ps1`
+This creates `ct-config.json` in the same folder.
 
-Put both in the same folder, for example:
-`C:\superwhisper\`
+### D. Start the hotkey
+1. Double-click `ct.ahk`
+2. In any text field, type `,ct`
 
-### C. Set environment variables in PowerShell
-Open PowerShell and run (replace only API key):
+## 4) What `,ct` does
 
-```powershell
-setx GEMINI_API_KEY "<YOUR_GEMINI_API_KEY>"
-setx SUPER_PROMPT_URL "https://raw.githubusercontent.com/Samefisk/prompts/main/super-prompt.md"
-setx GEMINI_MODEL "gemini-3-pro-preview"
-setx GEMINI_THINKING_LEVEL "LOW"
-```
-
-Then close and reopen apps so env vars reload.
-
-### D. Start the hotkey script
-Double-click `ct.ahk`.
-
-## 4) How `,ct` works
-
-In any text input field:
-1. Type `,ct`
-2. Script sends Ctrl+A and Ctrl+C
-3. Script downloads latest `super-prompt.md`
-4. Script sends prompt + selected text to Gemini
-5. Script pastes model response back into the field
+1. Selects all text (`Ctrl+A`) and copies (`Ctrl+C`)
+2. Downloads latest `super-prompt.md`
+3. Sends prompt + text to Gemini (`gemini-3-pro-preview`, thinking `LOW` by default)
+4. Pastes result into the same field
 
 ## 5) Troubleshooting
 
-- Error about API key:
-  - Verify `GEMINI_API_KEY` was set and app was reopened.
-- Error about prompt URL:
-  - Open the raw URL in browser and confirm `super-prompt.md` loads.
-- No replacement text:
-  - Confirm there is text in the field before typing `,ct`.
-- First run is slow:
-  - Normal. It depends on network + model latency.
+- `Setup required` message:
+  - Run `setup_ct.ahk` first.
+- Transform failed:
+  - Re-run `setup_ct.ahk` and verify API key.
+- Prompt URL issue:
+  - Open `https://raw.githubusercontent.com/Samefisk/prompts/main/super-prompt.md` in browser.
+- Need logs:
+  - Check `%TEMP%\ct_gemini_debug.log` on Windows.
 
-## 6) Optional hardening later
+## 6) Optional polish for teammates
 
-- Add prompt URL fallback/mirroring.
-- Add local prompt caching (e.g., 5 minutes) to reduce HTTP calls.
-- Move from per-user API key to a small shared backend.
+- Put `ct.ahk` in Windows Startup folder for auto-launch on login.
+- Keep all three files together:
+  - `ct.ahk`
+  - `ct.ps1`
+  - `setup_ct.ahk`

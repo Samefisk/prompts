@@ -20,9 +20,9 @@
 
     psScript := A_ScriptDir . '\ct.ps1'
     cmd := 'powershell.exe -NoProfile -ExecutionPolicy Bypass -File "' . psScript . '" -ConfigPath "' . configPath . '"'
-    RunWait cmd, , 'Hide'
+    exitCode := RunWait(cmd, , 'Hide')
 
-    if (ErrorLevel != 0) {
+    if (exitCode != 0) {
         MsgBox 'Transform failed. Check setup_ct.ahk config and internet connection, then retry.'
         return
     }

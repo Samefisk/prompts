@@ -1,6 +1,6 @@
-# Team Setup: Shared `super.json` + Windows `,ct`
+# Team Setup: Shared `super-prompt.md` + Windows `,ct`
 
-This setup gives your team a shared, always-latest `super.json` and a Windows `,ct` shortcut.
+This setup gives your team a shared, always-latest prompt Markdown file and a Windows `,ct` shortcut.
 
 ## 1) Repo and prompt URL
 
@@ -8,7 +8,7 @@ Repo:
 `https://github.com/Samefisk/prompts`
 
 Raw prompt URL (latest on every push):
-`https://raw.githubusercontent.com/Samefisk/prompts/main/super.json`
+`https://raw.githubusercontent.com/Samefisk/prompts/main/super-prompt.md`
 
 ## 2) Your update workflow (so team always has latest)
 
@@ -20,6 +20,7 @@ git -C /Users/christofferandersen/Documents/superwhisper/modes commit -m "Update
 git -C /Users/christofferandersen/Documents/superwhisper/modes push
 ```
 
+`super-prompt.md` is auto-generated from `super.json` by GitHub Actions after push.
 Teammates do not need to pull git changes for prompt content if their script downloads from the raw URL each run.
 
 ## 3) Windows teammate install
@@ -41,7 +42,7 @@ Open PowerShell and run (replace only API key):
 
 ```powershell
 setx GEMINI_API_KEY "<YOUR_GEMINI_API_KEY>"
-setx SUPER_PROMPT_URL "https://raw.githubusercontent.com/Samefisk/prompts/main/super.json"
+setx SUPER_PROMPT_URL "https://raw.githubusercontent.com/Samefisk/prompts/main/super-prompt.md"
 setx GEMINI_MODEL "gemini-3-pro-preview"
 setx GEMINI_THINKING_LEVEL "LOW"
 ```
@@ -56,7 +57,7 @@ Double-click `ct.ahk`.
 In any text input field:
 1. Type `,ct`
 2. Script sends Ctrl+A and Ctrl+C
-3. Script downloads latest `super.json`
+3. Script downloads latest `super-prompt.md`
 4. Script sends prompt + selected text to Gemini
 5. Script pastes model response back into the field
 
@@ -65,7 +66,7 @@ In any text input field:
 - Error about API key:
   - Verify `GEMINI_API_KEY` was set and app was reopened.
 - Error about prompt URL:
-  - Open the raw URL in browser and confirm `super.json` loads.
+  - Open the raw URL in browser and confirm `super-prompt.md` loads.
 - No replacement text:
   - Confirm there is text in the field before typing `,ct`.
 - First run is slow:

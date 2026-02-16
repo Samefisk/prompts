@@ -21,7 +21,7 @@ if ([string]::IsNullOrWhiteSpace($apiKey)) {
 
 $promptUrl = $env:SUPER_PROMPT_URL
 if ([string]::IsNullOrWhiteSpace($promptUrl)) {
-  $promptUrl = 'https://raw.githubusercontent.com/Samefisk/prompts/main/super.json'
+  $promptUrl = 'https://raw.githubusercontent.com/Samefisk/prompts/main/super-prompt.md'
 }
 
 $model = $env:GEMINI_MODEL

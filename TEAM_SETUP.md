@@ -40,9 +40,10 @@ Put both in the same folder, for example:
 Open PowerShell and run (replace only API key):
 
 ```powershell
-setx OPENAI_API_KEY "<YOUR_OPENAI_API_KEY>"
+setx GEMINI_API_KEY "<YOUR_GEMINI_API_KEY>"
 setx SUPER_PROMPT_URL "https://raw.githubusercontent.com/Samefisk/prompts/main/super.json"
-setx OPENAI_MODEL "gpt-4.1-mini"
+setx GEMINI_MODEL "gemini-3-pro-preview"
+setx GEMINI_THINKING_LEVEL "LOW"
 ```
 
 Then close and reopen apps so env vars reload.
@@ -56,13 +57,13 @@ In any text input field:
 1. Type `,ct`
 2. Script sends Ctrl+A and Ctrl+C
 3. Script downloads latest `super.json`
-4. Script sends prompt + selected text to OpenAI
+4. Script sends prompt + selected text to Gemini
 5. Script pastes model response back into the field
 
 ## 5) Troubleshooting
 
 - Error about API key:
-  - Verify `OPENAI_API_KEY` was set and app was reopened.
+  - Verify `GEMINI_API_KEY` was set and app was reopened.
 - Error about prompt URL:
   - Open the raw URL in browser and confirm `super.json` loads.
 - No replacement text:

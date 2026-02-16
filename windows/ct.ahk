@@ -17,7 +17,7 @@
     RunWait cmd, , 'Hide'
 
     if (ErrorLevel != 0) {
-        MsgBox 'Transform failed. Check OPENAI_API_KEY and SUPER_PROMPT_URL, then retry.'
+        MsgBox 'Transform failed. Check GEMINI_API_KEY and SUPER_PROMPT_URL, then retry.'
         return
     }
 

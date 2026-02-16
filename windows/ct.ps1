@@ -1,8 +1,21 @@
 $ErrorActionPreference = 'Stop'
 
-$apiKey = $env:OPENAI_API_KEY
+$logFile = "$env:TEMP\ct_gemini_debug.log"
+function Write-DebugLog {
+  param([string]$message)
+  Add-Content -Path $logFile -Value "[$(Get-Date -Format 'HH:mm:ss')] $message"
+}
+
+Write-DebugLog '========================================'
+Write-DebugLog 'Script started.'
+
+$apiKey = $env:GEMINI_API_KEY
 if ([string]::IsNullOrWhiteSpace($apiKey)) {
-  Write-Error 'OPENAI_API_KEY is not set.'
+  $apiKey = $env:GOOGLE_API_KEY
+}
+if ([string]::IsNullOrWhiteSpace($apiKey)) {
+  Write-Error 'GEMINI_API_KEY (or GOOGLE_API_KEY) is not set.'
+  Write-DebugLog 'CRITICAL: API key empty.'
   exit 1
 }
 
@@ -11,49 +24,89 @@ if ([string]::IsNullOrWhiteSpace($promptUrl)) {
   $promptUrl = 'https://raw.githubusercontent.com/Samefisk/prompts/main/super.json'
 }
 
-$model = $env:OPENAI_MODEL
+$model = $env:GEMINI_MODEL
 if ([string]::IsNullOrWhiteSpace($model)) {
-  $model = 'gpt-4.1-mini'
+  $model = 'gemini-3-pro-preview'
+}
+
+$thinkingLevel = $env:GEMINI_THINKING_LEVEL
+if ([string]::IsNullOrWhiteSpace($thinkingLevel)) {
+  $thinkingLevel = 'LOW'
+} else {
+  $thinkingLevel = $thinkingLevel.ToUpperInvariant()
+}
+if ($thinkingLevel -notin @('MINIMAL', 'LOW', 'MEDIUM', 'HIGH')) {
+  $thinkingLevel = 'LOW'
 }
 
 $userText = Get-Clipboard -Raw
 if ([string]::IsNullOrWhiteSpace($userText)) {
   Write-Error 'Clipboard is empty. Nothing to transform.'
+  Write-DebugLog 'CRITICAL: Clipboard empty.'
   exit 1
 }
 
 $prompt = (Invoke-WebRequest -Uri $promptUrl -UseBasicParsing).Content
 if ([string]::IsNullOrWhiteSpace($prompt)) {
   Write-Error "Prompt download failed from $promptUrl"
+  Write-DebugLog "CRITICAL: Prompt download failed from $promptUrl"
   exit 1
 }
 
 $inputText = "$prompt`n`n### User Text`n$userText"
+Write-DebugLog "Model: $model | Thinking: $thinkingLevel | Input chars: $($inputText.Length)"
 
 $body = @{
-  model = $model
-  input = $inputText
-} | ConvertTo-Json -Depth 10
+  contents = @(
+    @{
+      parts = @(
+        @{
+          text = $inputText
+        }
+      )
+    }
+  )
+  generationConfig = @{
+    thinkingConfig = @{
+      thinkingLevel = $thinkingLevel
+      includeThoughts = $false
+    }
+  }
+} | ConvertTo-Json -Depth 12
 
-$headers = @{ Authorization = "Bearer $apiKey" }
-$response = Invoke-RestMethod -Uri 'https://api.openai.com/v1/responses' -Method Post -Headers $headers -ContentType 'application/json' -Body $body
+$uri = "https://generativelanguage.googleapis.com/v1beta/models/$model`:generateContent?key=$apiKey"
+Write-DebugLog 'Sending request to Gemini...'
+$response = Invoke-RestMethod -Uri $uri -Method Post -ContentType 'application/json' -Body $body
 
-$outputText = $response.output_text
-if ([string]::IsNullOrWhiteSpace($outputText)) {
-  $outputText = ''
-  foreach ($item in $response.output) {
-    foreach ($content in $item.content) {
-      if ($content.type -eq 'output_text' -and -not [string]::IsNullOrWhiteSpace($content.text)) {
-        $outputText += $content.text
+if ($null -ne $response.error -and -not [string]::IsNullOrWhiteSpace($response.error.message)) {
+  Write-Error "Gemini API Error: $($response.error.message)"
+  Write-DebugLog "API ERROR: $($response.error.message)"
+  exit 1
+}
+
+$outputText = ''
+if ($null -ne $response.candidates) {
+  foreach ($candidate in $response.candidates) {
+    if ($null -eq $candidate.content -or $null -eq $candidate.content.parts) {
+      continue
+    }
+    foreach ($part in $candidate.content.parts) {
+      if (-not [string]::IsNullOrWhiteSpace($part.text)) {
+        $outputText += $part.text
       }
+    }
+    if (-not [string]::IsNullOrWhiteSpace($outputText)) {
+      break
     }
   }
 }
 
 if ([string]::IsNullOrWhiteSpace($outputText)) {
-  Write-Error 'Model returned no output text.'
+  Write-Error 'Error: No text returned from Gemini.'
+  Write-DebugLog 'CRITICAL: Empty Gemini response text.'
   exit 1
 }
 
 Set-Clipboard -Value $outputText
+Write-DebugLog 'Success. Clipboard updated.'
 exit 0

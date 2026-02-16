@@ -2,7 +2,7 @@
 
 ; Type ,ct to transform the current text field contents.
 ; Flow: Ctrl+A -> Ctrl+C -> run PowerShell script -> Ctrl+V
-::,ct::
+:*:,ct::
 {
     configPath := A_ScriptDir . '\ct-config.json'
     if !FileExist(configPath) {

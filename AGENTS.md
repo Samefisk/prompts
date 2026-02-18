@@ -14,6 +14,7 @@ They must be continuously refined after each user request as understanding impro
 - Prefer targeted, minimal diffs that fix behavior without broad rewrites.
 - Keep terminology consistent across all sections so one rule does not conflict with another.
 - When changing a core convention, update all duplicate sections that restate it (rules, templates, checklist, and examples).
+- When replacing a core term (taxonomy changes), perform full migration of the old term across dictionary entries, templates, examples, edge cases, and checklist language.
 
 ## Type 2 style and tone policy
 - Type 2 premise flavor should default to formal bridges, not conversational tone.
@@ -47,6 +48,7 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
+- 2026-02-18: Replaced legacy `Defense` with Guard taxonomy as full nouns (`Damage Guard`, `Physical Guard`, `Magic Guard`, `Spirit Guard`) and treat this as a full-replace convention, not an alias model.
 - 2026-02-18: Added mandatory publish rule for `super.json` edits: always commit and push after changes unless explicitly told not to.
 - 2026-02-16: No rule change (runtime trigger-boundary fix in automation script; no new durable prompt-edit preference introduced).
 - 2026-02-16: No rule change (runtime hotkey trigger behavior fix; no new durable prompt-edit preference introduced).

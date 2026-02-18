@@ -472,7 +472,7 @@ The Caster Kicks [with frozen momentum], dealing Agility as
 ```other
 The Caster Punches [with burning fury], dealing Strength as
         Physical damage -> [cracking the] target's [armor, leaving]
-        it suffering -1 Defense (Current Round).
+        it suffering -1 Physical Guard (Current Round).
 ```
 
 ```other
@@ -750,13 +750,13 @@ When I Move, I Gain 1 Energy [drawn from the trembling ground].
 ```
 
 ```other
-When The Equipped Hero takes Magic damage, it Gains 1 Defense
+When The Equipped Hero takes Magic damage, it Gains 1 Magic Guard
     (Current Round).
 ```
 
 ```other
 [Warding runes flare under duress, and thus] when The Equipped Hero
-    takes Magic damage, it Gains 1 Defense (Current Round).
+    takes Magic damage, it Gains 1 Magic Guard (Current Round).
 ```
 
 ```other
@@ -801,12 +801,12 @@ when a card name is provided; otherwise see Step 4j.
   trigger.
 - Examples (structure only):
     When I am dealt damage, I may discard 1 card; when I do, I Gain
-    Defense equal to that card's cost.
+    Damage Guard equal to that card's cost.
 ```
 
 ```other
 [Pain sharpens my resolve, and thus] when I am dealt damage, I may
-    discard 1 card; when I do, I Gain Defense equal to that card's
+    discard 1 card; when I do, I Gain Damage Guard equal to that card's
     cost.
 ```
 
@@ -832,7 +832,7 @@ when a card name is provided; otherwise see Step 4j.
 
     - Variable Strings (capitalize exactly):
         - Stats: Primary, Strength, Agility, Intellect
-        - Resources: Health, Defense, Energy, Overcharge, Arcane Power
+        - Resources: Health, Damage Guard, Physical Guard, Magic Guard, Spirit Guard, Energy, Overcharge, Arcane Power
         - Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport
         - Zones: Hand, Deck, Discard Pile
         - Objects: Obstructions, Bloom Token
@@ -965,7 +965,7 @@ Type 1A — Flavor introducing the anchor:
 The Caster [channeling raw lightning], Launches [a crackling spear], dealing Agility as Magic damage -> Pulling themselves in a straight line to the target [through the current left behind].
 
 Type 1A — Flavor woven into chained effect:
-The Caster Punches [with burning fury], dealing Strength as Physical damage -> [cracking the] target's [armor, leaving] it suffering -1 Defense (Current Round).
+The Caster Punches [with burning fury], dealing Strength as Physical damage -> [cracking the] target's [armor, leaving] it suffering -1 Physical Guard (Current Round).
 
 Type 1C — Flavor as emotional transition after arrow:
 The Caster [gaining profound insight], draws 2 cards -> [but overcome with awe] it cannot Move (Current Round).
@@ -1022,7 +1022,10 @@ When I Move, I Gain 1 Energy [drawn from the trembling ground].
 \--- Type 4: Multi-Part Triggers (Premise Flavor) ---
 
 Type 4 — Multi-part trigger (no flavor):
-When I am dealt damage, I may discard 1 card; when I do, I Gain Defense equal to that card's cost.
+When I am dealt damage, I may discard 1 card; when I do, I Gain Damage Guard equal to that card's cost.
 
 Type 4 — Multi-part trigger (premise flavor):
-[Pain sharpens my resolve, and thus] when I am dealt damage, I may discard 1 card; when I do, I Gain Defense equal to that card's cost.
+[Pain sharpens my resolve, and thus] when I am dealt damage, I may discard 1 card; when I do, I Gain Damage Guard equal to that card's cost.
+
+
+

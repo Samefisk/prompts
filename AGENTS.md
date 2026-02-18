@@ -37,6 +37,7 @@ They must be continuously refined after each user request as understanding impro
 - If a requested style preference is clear, encode it as a direct rule, not just an example.
 - If wording preferences affect multiple effect types, propagate them intentionally and note the propagation.
 - Keep user-facing summaries concise and focused on what changed and why.
+- When `super.json` is changed, always commit and `git push` those changes in the same execution flow unless the user explicitly tells you not to push.
 
 ## Continuous learning loop (required every request)
 - After each user request, extract any new preference, constraint, or quality signal and update this file when it adds durable guidance.
@@ -46,6 +47,7 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
+- 2026-02-18: Added mandatory publish rule for `super.json` edits: always commit and push after changes unless explicitly told not to.
 - 2026-02-16: No rule change (runtime trigger-boundary fix in automation script; no new durable prompt-edit preference introduced).
 - 2026-02-16: No rule change (runtime hotkey trigger behavior fix; no new durable prompt-edit preference introduced).
 - 2026-02-16: No rule change (runtime warning fix in automation script; no new durable prompt-edit preference introduced).

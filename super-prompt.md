@@ -801,12 +801,12 @@ when a card name is provided; otherwise see Step 4j.
   trigger.
 - Examples (structure only):
     When I am dealt damage, I may discard 1 card; when I do, I Gain
-    Damage Guard equal to that card's cost.
+    Universal Guard equal to that card's cost.
 ```
 
 ```other
 [Pain sharpens my resolve, and thus] when I am dealt damage, I may
-    discard 1 card; when I do, I Gain Damage Guard equal to that card's
+    discard 1 card; when I do, I Gain Universal Guard equal to that card's
     cost.
 ```
 
@@ -832,7 +832,7 @@ when a card name is provided; otherwise see Step 4j.
 
     - Variable Strings (capitalize exactly):
         - Stats: Primary, Strength, Agility, Intellect
-        - Resources: Health, Damage Guard, Physical Guard, Magic Guard, Spirit Guard, Energy, Overcharge, Arcane Power
+        - Resources: Health, Universal Guard, Physical Guard, Magic Guard, Spirit Guard, Energy, Overcharge, Arcane Power
         - Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport
         - Zones: Hand, Deck, Discard Pile
         - Objects: Obstructions, Bloom Token
@@ -1022,10 +1022,11 @@ When I Move, I Gain 1 Energy [drawn from the trembling ground].
 \--- Type 4: Multi-Part Triggers (Premise Flavor) ---
 
 Type 4 — Multi-part trigger (no flavor):
-When I am dealt damage, I may discard 1 card; when I do, I Gain Damage Guard equal to that card's cost.
+When I am dealt damage, I may discard 1 card; when I do, I Gain Universal Guard equal to that card's cost.
 
 Type 4 — Multi-part trigger (premise flavor):
-[Pain sharpens my resolve, and thus] when I am dealt damage, I may discard 1 card; when I do, I Gain Damage Guard equal to that card's cost.
+[Pain sharpens my resolve, and thus] when I am dealt damage, I may discard 1 card; when I do, I Gain Universal Guard equal to that card's cost.
+
 
 
 

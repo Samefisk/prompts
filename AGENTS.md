@@ -48,7 +48,8 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
-- 2026-02-18: Replaced legacy `Defense` with Guard taxonomy as full nouns (`Damage Guard`, `Physical Guard`, `Magic Guard`, `Spirit Guard`) and treat this as a full-replace convention, not an alias model.
+- 2026-02-18: Renamed the universal guard term from `Damage Guard` to `Universal Guard`; canonical guard taxonomy is now `Universal Guard`, `Physical Guard`, `Magic Guard`, `Spirit Guard`.
+- 2026-02-18: Replaced legacy `Defense` with Guard taxonomy as full nouns and full-replace convention; superseded universal term from `Damage Guard` to `Universal Guard`.
 - 2026-02-18: Added mandatory publish rule for `super.json` edits: always commit and push after changes unless explicitly told not to.
 - 2026-02-16: No rule change (runtime trigger-boundary fix in automation script; no new durable prompt-edit preference introduced).
 - 2026-02-16: No rule change (runtime hotkey trigger behavior fix; no new durable prompt-edit preference introduced).

@@ -49,7 +49,7 @@ They must be continuously refined after each user request as understanding impro
 
 ## Learning Log
 - 2026-03-07: Duration formatting is front-loaded at clause start: `this turn [subject] [effect]`, `this round [subject] [effect]`, and `permanently [subject] [effect]`; do not use `(Current Turn)` or `(Current Round)` tags in final output.
-- 2026-03-06: Duration formatting now uses three canonical output forms: `for a short time (Current Turn)`, `for a long time (Current Round)`, and `permanently`; treat the duration phrase as part of the mechanical clause, not just a trailing parenthetical tag.
+- 2026-03-06: Superseded by 2026-03-07 duration rule update; the prior suffix-style duration format is no longer canonical.
 - 2026-02-18: Renamed the universal guard term from `Damage Guard` to `Universal Guard`; canonical guard taxonomy is now `Universal Guard`, `Physical Guard`, `Magic Guard`, `Spirit Guard`.
 - 2026-02-18: Replaced legacy `Defense` with Guard taxonomy as full nouns and full-replace convention; superseded universal term from `Damage Guard` to `Universal Guard`.
 - 2026-02-18: Added mandatory publish rule for `super.json` edits: always commit and push after changes unless explicitly told not to.

@@ -483,9 +483,8 @@ Type 1B — Anchor Phrase Non-Attack Action (Active Present):
         `[Subject] [Anchor Phrase] [flavor woven], [Effect] ->
         [Follow-Up] [flavor woven].`
     - Example (structure only):
-        The Caster Touches [beneath a veil of frost], target suffers
-        -2 Agility for a long time (Current Round) [as ice crawls through their
-        limbs].
+        The Caster Touches [beneath a veil of frost], this round target suffers
+        -2 Agility [as ice crawls through their limbs].
 ```
 
 ```other
@@ -750,13 +749,12 @@ When I Move, I Gain 1 Energy [drawn from the trembling ground].
 ```
 
 ```other
-When The Equipped Hero takes Magic damage, it Gains 1 Magic Guard for a long time
-    (Current Round).
+When The Equipped Hero takes Magic damage, this round it Gains 1 Magic Guard.
 ```
 
 ```other
 [Warding runes flare under duress, and thus] when The Equipped Hero
-    takes Magic damage, it Gains 1 Magic Guard for a long time (Current Round).
+    takes Magic damage, this round it Gains 1 Magic Guard.
 ```
 
 ```other
@@ -846,11 +844,11 @@ when a card name is provided; otherwise see Step 4j.
         - Never "this card"; always `this location`.
         - Prefer The Occupying Hero for on-tile effects.
 1. Format durations precisely
-    - Short duration uses `for a short time (Current Turn)`.
-    - Long duration uses `for a long time (Current Round)`.
-    - Permanent duration uses `permanently` with no parenthetical duration tag.
-    - Place duration wording at the end of the affected clause, e.g., `… gain +1 Intellect for a short time (Current Turn).`
-    - Canonical examples: `target suffers -1 Magic Guard for a short time (Current Turn).`, `target suffers -1 Magic Guard for a long time (Current Round).`, `target suffers -1 Magic Guard permanently.`
+    - Short duration uses `this turn [subject] [effect]`.
+    - Long duration uses `this round [subject] [effect]`.
+    - Permanent duration uses `permanently [subject] [effect]`.
+    - Duration wording must appear at the start of the affected clause, immediately before that clause's subject.
+    - Canonical examples: `this turn the target suffers -1 Magic Guard.`, `this round the target suffers -1 Magic Guard.`, `permanently the target suffers -1 Magic Guard.`
 1. Run the "Compiler" checklist internally before output
     - Voice correct (I vs The Caster vs System neutral)?
     - Tense: actions are present active (no "will").
@@ -859,7 +857,7 @@ when a card name is provided; otherwise see Step 4j.
     - Variables/actions/zones/objects are capitalized exactly.
     - No "You/Your" on Items/Fields; Field self-references are `this location`.
     - Damage math matches required formats where used.
-    - Duration Check: temporary effects use `for a short time (Current Turn)` or `for a long time (Current Round)`; permanent effects use `permanently` with no parenthetical tag.
+    - Duration Check: temporary effects use `this turn [subject] [effect]` or `this round [subject] [effect]`; permanent effects use `permanently [subject] [effect]`. No `(Current Turn)` or `(Current Round)` tags remain in final output.
     - Type Classification Check:
         - Does the effect happen once when played/activated? → Type 1
         - Is it always-on while the card is in play?
@@ -968,16 +966,16 @@ Type 1A — Flavor introducing the anchor:
 The Caster [channeling raw lightning], Launches [a crackling spear], dealing Agility as Magic damage -> Pulling themselves in a straight line to the target [through the current left behind].
 
 Type 1A — Flavor woven into chained effect:
-The Caster Punches [with burning fury], dealing Strength as Physical damage -> [cracking the] target's [armor, leaving] it suffering -1 Physical Guard for a long time (Current Round).
+The Caster Punches [with burning fury], dealing Strength as Physical damage -> [cracking the] target's [armor], this round the target suffers -1 Physical Guard.
 
 Type 1C — Flavor as emotional transition after arrow:
-The Caster [gaining profound insight], draws 2 cards -> [but overcome with awe] it cannot Move for a long time (Current Round).
+The Caster [gaining profound insight], draws 2 cards -> [but overcome with awe] this round it cannot Move.
 
 Type 1B — Flavor split across the chain:
 The Caster Touches [with a whisper of void], target suffers -2 Health [as shadows eat at their form].
 
 Type 1A — Title-driven ("Frostbite Kick"):
-The Caster Kicks [with frozen momentum], dealing Agility as Physical damage -> [flash-freezing the] target [in place], making it unable to Move for a long time (Current Round).
+The Caster Kicks [with frozen momentum], dealing Agility as Physical damage -> [flash-freezing the] target [in place], this round it cannot Move.
 
 \--- Type 2: Persistent Effects (Premise Flavor / Premise-Justification Placement) ---
 

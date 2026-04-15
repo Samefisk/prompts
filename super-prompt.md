@@ -457,22 +457,37 @@ Type 1A — Attack Action (Active Present; damage-initiating):
     - With Dependent Follow-Up:
         `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as
         [Damage Type] damage -> [flavor/bridge/continuation woven].`
+    - Literal Number Damage Wording:
+        - If the damage amount is a literal number, omit `as` and write
+          `dealing [Number] [Damage Type] damage`.
+        - Use `as` only for stat-based damage formulas such as
+          `dealing Strength as Physical damage`.
+        - Never write `dealing [Number] as [Damage Type] damage`.
+    - Damage-Dealt Guard Reduction Wording:
+        - When a follow-up reduces Guard by the damage dealt, prefer
+          possession + reduced-by construction:
+          `this turn the target's Magic Guard is reduced by the damage dealt.`
+        - Prefer this over per-point suffer phrasing such as
+          `this turn the target suffers -1 Magic Guard for each damage dealt`.
     - Examples (structure only):
         The Caster Launches [a crackling spear of lightning], dealing
         Agility as Magic damage -> Pulling themselves in a straight
         line to the target [through the current left behind].
+        The Caster Slings [an orb of ionizing electricity], dealing
+        1 Magic damage -> this turn the target's Magic Guard is
+        reduced by the damage dealt [as the voltage has corroded its armor].
 ```
 
 ```other
 The Caster Kicks [with frozen momentum], dealing Agility as
         Physical damage -> [flash-freezing the] target [in place],
-        making it unable to Move for a long time (Current Round).
+        this round it cannot Move.
 ```
 
 ```other
 The Caster Punches [with burning fury], dealing Strength as
-        Physical damage -> [cracking the] target's [armor, leaving]
-        it suffering -1 Physical Guard for a long time (Current Round).
+        Physical damage -> [cracking the] target's [armor], this round
+        the target suffers -1 Physical Guard.
 ```
 
 ```other
@@ -483,7 +498,7 @@ Type 1B — Anchor Phrase Non-Attack Action (Active Present):
         `[Subject] [Anchor Phrase] [flavor woven], [Effect] ->
         [Follow-Up] [flavor woven].`
     - Example (structure only):
-        The Caster Touches [beneath a veil of frost], this round target suffers
+        The Caster Touches [beneath a veil of frost], this round the target suffers
         -2 Agility [as ice crawls through their limbs].
 ```
 
@@ -500,7 +515,7 @@ Type 1C — Non-Anchor Phrase Non-Attack Action (Active Present):
 
 ```other
 The Caster [gaining profound insight], draws 2 cards ->
-        [but overcome with awe] it cannot Move for a long time (Current Round).
+        [but overcome with awe] this round it cannot Move.
 ```
 
 ```other
@@ -857,6 +872,8 @@ when a card name is provided; otherwise see Step 4j.
     - Variables/actions/zones/objects are capitalized exactly.
     - No "You/Your" on Items/Fields; Field self-references are `this location`.
     - Damage math matches required formats where used.
+    - Damage Wording Check: literal numbers use `dealing [Number] [Damage Type] damage`; only stat-based formulas use `dealing [Stat] as [Damage Type] damage`.
+    - Guard Reduction Check: when an effect scales Guard reduction from damage dealt, prefer `[target]'s [Guard Type] is reduced by the damage dealt` over `suffers -1 [Guard Type] for each damage dealt`.
     - Duration Check: temporary effects use `this turn [subject] [effect]` or `this round [subject] [effect]`; permanent effects use `permanently [subject] [effect]`. No `(Current Turn)` or `(Current Round)` tags remain in final output.
     - Type Classification Check:
         - Does the effect happen once when played/activated? → Type 1
@@ -940,6 +957,12 @@ damage` could be read as unscoped, rewrite to scoped form:
 `Magic damage [Subject] deals is increased by [N].`
 When flavor is present, prefer:
 `[Flavor premise], increasing the [Damage Type] damage [Subject] deals by [N].`
+- Numeric damage wording: If the damage amount is a literal number, write
+`dealing [Number] [Damage Type] damage`, not `dealing [Number] as
+[Damage Type] damage`.
+- Guard reduction from damage dealt: Prefer `[target]'s [Guard Type] is
+reduced by the damage dealt` over `target suffers -1 [Guard Type] for
+each damage dealt`.
 - Targeting ambiguity (Anchor-implied single target): If an Anchor Phrase implies a single affected unit (Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch), default to `target` unless the transcript explicitly states a different scope. Do not redundantly add adjacency text already implied by the Anchor Phrase.
 - `->` vs `and` ambiguity: If the second clause depends on the first clause's outcome to define where/what/how much/which, use `->`. Otherwise, use `and` (or a new sentence) within the same segment.
 - Out-of-dictionary synonyms detected: rewrite into the closest exact Dictionary term (e.g., "teleport" → Teleport; "discard pile" → Discard Pile; "obstacle" → Obstruction(s)).
@@ -964,6 +987,9 @@ The Caster [in a sudden shimmer], Teleports 1 tile.
 
 Type 1A — Flavor introducing the anchor:
 The Caster [channeling raw lightning], Launches [a crackling spear], dealing Agility as Magic damage -> Pulling themselves in a straight line to the target [through the current left behind].
+
+Type 1A — Literal number damage + Guard reduction:
+The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> this turn the target's Magic Guard is reduced by the damage dealt [as the voltage has corroded its armor].
 
 Type 1A — Flavor woven into chained effect:
 The Caster Punches [with burning fury], dealing Strength as Physical damage -> [cracking the] target's [armor], this round the target suffers -1 Physical Guard.

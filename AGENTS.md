@@ -48,6 +48,7 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
+- 2026-04-15: For literal numeric damage, omit `as` and use `dealing [Number] [Damage Type] damage`; when Guard reduction scales from damage dealt, prefer `[target]'s [Guard Type] is reduced by the damage dealt` over per-point `suffers -1 ... for each damage dealt` phrasing.
 - 2026-03-07: Duration formatting is front-loaded at clause start: `this turn [subject] [effect]`, `this round [subject] [effect]`, and `permanently [subject] [effect]`; do not use `(Current Turn)` or `(Current Round)` tags in final output.
 - 2026-03-06: Superseded by 2026-03-07 duration rule update; the prior suffix-style duration format is no longer canonical.
 - 2026-02-18: Renamed the universal guard term from `Damage Guard` to `Universal Guard`; canonical guard taxonomy is now `Universal Guard`, `Physical Guard`, `Magic Guard`, `Spirit Guard`.

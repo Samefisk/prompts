@@ -244,7 +244,6 @@ b) Weaving Patterns (non-exhaustive; choose what reads best):
    - Post-anchor: `Anchor Phrase [flavor], mechanical effect`
    - Mid-chain bridge: `mechanical effect -> [flavor] continuation`
    - Wrapping: `[flavor-start] mechanical text [flavor-end]`
-   - Integrated consequence: `mechanical effect -> this turn, [flavor] the target's Guard, reducing it by the damage dealt.`
    - Conditional/emotional: `-> [but flavor] mechanical effect`
    Invalid tailing pattern: `mechanical effect [flavor].`
 

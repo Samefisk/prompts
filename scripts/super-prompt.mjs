@@ -29,14 +29,18 @@ function writePromptToJson(prompt) {
   fs.writeFileSync(jsonPath, next);
 }
 
+function normalizeMarkdownPrompt(markdown) {
+  return markdown.endsWith("\n") ? markdown.slice(0, -1) : markdown;
+}
+
 function exportPrompt() {
   const prompt = readJson().prompt;
-  fs.writeFileSync(promptPath, prompt);
+  fs.writeFileSync(promptPath, `${prompt}\n`);
   console.log("Exported super.json prompt to super-prompt.md");
 }
 
 function importPrompt() {
-  const prompt = fs.readFileSync(promptPath, "utf8");
+  const prompt = normalizeMarkdownPrompt(fs.readFileSync(promptPath, "utf8"));
   writePromptToJson(prompt);
   console.log("Imported super-prompt.md into super.json");
 }
@@ -45,7 +49,7 @@ function checkPrompt() {
   const prompt = readJson().prompt;
   const markdown = fs.readFileSync(promptPath, "utf8");
 
-  if (prompt !== markdown) {
+  if (prompt !== normalizeMarkdownPrompt(markdown)) {
     console.error("super.json prompt and super-prompt.md differ.");
     console.error("Run: node scripts/super-prompt.mjs export");
     process.exit(1);

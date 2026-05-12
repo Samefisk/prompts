@@ -58,6 +58,6 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, do not add a note.
 
 ## Recent Changes
-- 2026-05-12: For flavored dependent continuations after `->`, prefer consequence flavor before duration, then a complete scoped mechanical sentence (`[flavor] this turn, [subject] [effect]`).
+- 2026-05-12: For flavored duration-scoped continuations after `->`, keep duration first, then embedded consequence-state flavor, then the mechanical sentence.
 - 2026-05-12: Rewrite Section 6.6 around syntactic integration: brackets must be removable or grammatically bridge surrounding text, and no segment may end with flavor.
 - 2026-05-12: Do not keep Guard-specific flavor patterns in the general Type 1 weaving examples; rely on broad placement rules instead.

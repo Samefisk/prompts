@@ -58,6 +58,6 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, do not add a note.
 
 ## Recent Changes
+- 2026-05-12: Use nested `6.x` headings inside `## 6) Step-by-Step Process`; reserve document-level `## 7)`, `## 8)`, and `## 9)` for Output Requirements, Edge Cases, and Examples.
 - 2026-05-12: Keep compressed prompt sections on one continuous Markdown heading hierarchy; avoid mixing top-level `##` sections into the internal numbered prompt flow.
 - 2026-05-12: Compressed `super-prompt.md` by merging duplicate rules, compacting the Dictionary, shortening examples/checklists, and preserving behavior in active rules.
-- 2026-05-12: Promoted main Section 6 labels to Markdown headings so hierarchy survives without code fences.

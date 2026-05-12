@@ -50,36 +50,12 @@ They must be continuously refined after each user request as understanding impro
 - After each user request, extract any new preference, constraint, or quality signal and update this file when it adds durable guidance.
 - Treat rule updates as part of completion criteria, not optional follow-up.
 - Deepen, do not just append: merge overlapping rules, remove ambiguity, and keep the rule set coherent.
-- Keep a lightweight history section (`Learning Log`) with date-stamped entries describing what was learned and how it changed editing behavior.
-- If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
+- Do not maintain an append-only learning log; it bloats future LLM context.
+- Encode durable learnings in the active rule sections above, replacing or superseding older wording directly.
+- Keep `Recent Changes` to at most 3 short bullets. Delete older notes once their guidance is represented in active rules.
+- If no durable new learning exists for a request, do not add a note.
 
-## Learning Log
-- 2026-05-12: Strengthened the prompt-edit workflow: never edit the `prompt` field in `super.json` directly. Edit `super-prompt.md` as the canonical source, import into `super.json`, and commit/push both files together.
-- 2026-05-12: Process improvement after a slow prompt edit: use `super-prompt.md` as the primary edit surface and sync with `node scripts/super-prompt.mjs import/export/check` to avoid brittle one-line JSON string surgery and GitHub Actions follow-up commits.
-- 2026-05-12: Tailing flavor codas after complete mechanical clauses are no longer allowed; migrate affected rules, templates, checklist language, and examples to premise or embedded flavor, especially chained Guard reductions such as `-> this turn, [flavor] the target's Magic Guard, reducing it by the damage dealt.`
-- 2026-04-15: For literal numeric damage, omit `as` and use `dealing [Number] [Damage Type] damage`; when Guard reduction scales from damage dealt, prefer `[target]'s [Guard Type] is reduced by the damage dealt` over per-point `suffers -1 ... for each damage dealt` phrasing.
-- 2026-03-07: Duration formatting is front-loaded at clause start: `this turn [subject] [effect]`, `this round [subject] [effect]`, and `permanently [subject] [effect]`; do not use `(Current Turn)` or `(Current Round)` tags in final output.
-- 2026-03-06: Superseded by 2026-03-07 duration rule update; the prior suffix-style duration format is no longer canonical.
-- 2026-02-18: Renamed the universal guard term from `Damage Guard` to `Universal Guard`; canonical guard taxonomy is now `Universal Guard`, `Physical Guard`, `Magic Guard`, `Spirit Guard`.
-- 2026-02-18: Replaced legacy `Defense` with Guard taxonomy as full nouns and full-replace convention; superseded universal term from `Damage Guard` to `Universal Guard`.
-- 2026-02-18: Superseded by 2026-05-12 Markdown-first workflow; publish rule still applies, but prompt edits must be made in `super-prompt.md`, synced into `super.json`, then committed and pushed together unless explicitly told not to.
-- 2026-02-16: No rule change (runtime trigger-boundary fix in automation script; no new durable prompt-edit preference introduced).
-- 2026-02-16: No rule change (runtime hotkey trigger behavior fix; no new durable prompt-edit preference introduced).
-- 2026-02-16: No rule change (runtime warning fix in automation script; no new durable prompt-edit preference introduced).
-- 2026-02-16: When onboarding documentation should be front-and-center in the repo, mirror the onboarding doc into `README.md` for zero-discovery setup.
-- 2026-02-16: Prefer no-terminal teammate onboarding when requested: provide click-through setup scripts, local config files, and docs that avoid shell commands for end users.
-- 2026-02-16: For team-facing prompt distribution, prefer publishing an isolated prompt artifact (`.md`) derived from mode JSON rather than sharing the full JSON file; keep automation/docs aligned to the artifact URL.
-- 2026-02-16: When adapting teammate automation tooling, mirror the user-provided reference script structure and provider defaults; encode explicit model/reasoning requirements as defaults in implementation docs and scripts.
-- 2026-02-16: No rule change (execution request to run push/auth flow; no new durable prompt-edit preference introduced).
-- 2026-02-16: For distribution/onboarding requests, provide beginner-friendly Git steps and copy-paste commands; avoid assuming prior Git experience.
-- 2026-02-15: Superseded by 2026-05-12 Markdown-first workflow; deterministic prompt edits still prioritize rule-level changes over examples.
-- 2026-02-15: Enforced formal Type 2 premise tone (`and thus`/`therefore`/`allowing ...`) and avoid informal `so` by default.
-- 2026-02-15: Added mandatory continuous rule refinement after each request, with explicit logging.
-- 2026-02-15: Prioritized Type 2C comprehension by preferring embedded flavor after `When` trigger clauses; accepted binder pattern `When ..., [flavor, allowing me/it] to ...` when clearer.
-- 2026-02-15: Banned em dashes in final output text; use semicolon or formal connector punctuation instead.
-- 2026-02-15: Added spoken directive `update`: treat selected/transcribed legacy text as mechanics source only and reconstruct wording to current standards while preserving mechanics.
-- 2026-02-15: When adding anchor phrases, update both the dictionary table and all downstream targeting/ambiguity checks that reference anchor-implied single-target behavior.
-- 2026-02-15: Added Punch-equivalent anchors (`Headbutt`, `Claw`, `Gouge`, `Ram`, `Maul`) and propagated them to all single-target anchor checks.
-- 2026-02-15: Prefer pruning redundant anchors when semantics overlap heavily (e.g., keep one canonical anchor and remove near-duplicates), and propagate removals to all validation lists.
-- 2026-02-15: For persistent damage buffs, prefer explicit scoped wording (`Magic damage X deals is increased by N`) over ambiguous `X deals +N Magic damage`; keep flavor at premise start or justification end for clarity.
-- 2026-02-15: Refined persistent damage-buff style: with flavor, prefer premise-first plus mechanical continuation (`[Flavor], increasing the Magic damage X deals by N`) for better readability and scope clarity.
+## Recent Changes
+- 2026-05-12: Replaced append-only learning log with compact active-rule updates plus this capped recent-notes section.
+- 2026-05-12: Made `super-prompt.md` the canonical prompt edit surface; sync into `super.json` with `node scripts/super-prompt.mjs import`.
+- 2026-05-12: Banned trailing flavor codas after complete mechanical clauses; use premise or embedded flavor instead.

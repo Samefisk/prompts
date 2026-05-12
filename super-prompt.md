@@ -226,34 +226,36 @@ f) No Example Leakage: Do not borrow 3+ consecutive words from any
 
 ### 6.6 Flavor Placement Rules
 
+Placement is grammatical, not decorative. Every flavor bracket must
+either be removable without breaking the mechanical sentence, or act as
+a grammatical bridge that completes the surrounding sentence.
+
 #### 6.6A System A: Flexible Weaving (Type 1 Action Effects)
 
 Flavor brackets are woven into the sentence wherever they best serve
-the narrative arc. They are not confined to fixed slots.
+the narrative arc, but placement must pass the syntax tests below.
 
-a) Anywhere-Legal Principle: A bracket may appear at any position —
-   before a verb, after a verb, around a conjunction, mid-clause,
-   after `->`, wrapping mechanical text — as long as:
-   - Mechanical text outside brackets remains parseable.
-   - The bracket does not split a mechanical keyword or variable
-     string.
-   - The sentence reads as natural prose with brackets included.
+a) Removable Bracket Test: If the bracket is deleted, the remaining
+   mechanical sentence must still be complete and unambiguous.
 
-b) Weaving Patterns (non-exhaustive; choose what reads best):
-   - Pre-action: `[flavor], mechanical effect`
-   - Post-anchor: `Anchor Phrase [flavor], mechanical effect`
-   - Mid-chain bridge: `mechanical effect -> [flavor] continuation`
-   - Wrapping: `[flavor-start] mechanical text [flavor-end]`
-   - Conditional/emotional: `-> [but flavor] mechanical effect`
-   Invalid tailing pattern: `mechanical effect [flavor].`
+b) Bridge Bracket Test: If deleting the bracket breaks the sentence,
+   the bracket must supply the missing grammatical link into the words
+   around it (such as subject, verb, preposition, or connector).
+   Dangling fragments that collide with the next mechanical phrase are
+   invalid.
 
-c) Single-Bracket Minimum for Type 1. Two+ preferred for `->` chains.
-d) Type 1 tailing-flavor ban: do not end a Type 1 segment or dependent
-   follow-up with a bracket after the mechanical clause is complete.
-   For dependent debuffs, put the duration first, then comma, then
-   embed flavor before the affected object or state change. Preferred
-   shape: `-> this turn, [flavor] the target's Magic Guard, reducing it
-   by the damage dealt.`
+c) Legal weaving positions include pre-action, post-anchor, mid-chain,
+   wrapping, and after `->`, provided the Removable or Bridge test
+   passes.
+
+d) Never split a mechanical keyword, variable string, number, range,
+   duration phrase, or Game Action with flavor.
+
+e) No effect segment may end with flavor. A dependent follow-up also
+   cannot end with flavor. Move tail flavor into an earlier premise,
+   bridge, or embedded position.
+
+f) Single-Bracket Minimum for Type 1. Two+ preferred for `->` chains.
 
 #### 6.6B System B: Premise/Embedded Placement (Types 2, 3, 4)
 
@@ -263,7 +265,8 @@ Flavor brackets occupy one of two legal positions defined in
    2. PREMISE (formal): `[Flavor premise], therefore rule statement.`
    3. PREMISE (punctuation): `[Flavor premise;] rule statement.`
    4. EMBEDDED: In a syntactically safe non-core position.
-   5. TAILING CODA BAN: `Rule statement [flavor].` is invalid.
+   5. TAILING CODA BAN: `Rule statement [flavor].` is invalid because
+      no effect segment may end with flavor.
 
 d) Subject-Rule Interruption Ban (absolute): No bracket between
    Subject and the rule's core verb/permission/condition. Tested by:
@@ -288,11 +291,17 @@ f) Connecting Words for Premise: The premise must bridge
 
 #### 6.6C General Rules for Both Systems
 
-g) Read-Aloud Test: The final sentence (with brackets) should read
-   as coherent, fluid prose. For Types 2–4, it must ALSO read as a
-   clear, unambiguous rule when brackets are stripped.
+g) Syntactic Integration Test: The final sentence must read as
+   coherent prose with brackets included. If a bracket is not
+   removable, it must bridge grammatically into surrounding text.
 
-h) Bracket-Free Exception: Type 2–4 effects may omit flavor only
+h) Strip Test: For Types 2–4, the rule must also read as a clear,
+   unambiguous rule when brackets are stripped.
+
+i) Segment Ending Test: No final output segment may end with a flavor
+   bracket.
+
+j) Bracket-Free Exception: Type 2–4 effects may omit flavor only
    under the conditions specified in 6.4D(j) (no card name + simple
    + self-explanatory).
 

@@ -207,7 +207,7 @@ j) Types 2, 3, 4 (Rule/Trigger Effects): Flavor is MANDATORY when a
    - Adding flavor would be redundant padding.
    When in doubt, include flavor.
 
-5. Flavor Bracket Construction Rules (always enforced, both models)
+### 5. Flavor Bracket Construction Rules (always enforced, both models)
 
 a) Each bracket must be 2–8 words.
 b) Brackets must not contain: numbers, stat names, damage types,
@@ -227,7 +227,7 @@ e) For Premise Flavor (Types 2–4): brackets may also contain
 f) No Example Leakage: Do not borrow 3+ consecutive words from any
    example in this prompt.
 
-6. Flavor Placement Rules — Two Weaving Systems
+### 6. Flavor Placement Rules — Two Weaving Systems
 
 ### 6A. System A: Flexible Weaving (Type 1 Action Effects)
 
@@ -300,7 +300,7 @@ h) Bracket-Free Exception: Type 2–4 effects may omit flavor only
    under the conditions specified in Step 4j (no card name + simple
    + self-explanatory).
 
-7. Narrative Bridge Verbs (Type 1 only — the verb between action beats)
+### 7. Narrative Bridge Verbs (Type 1 only — the verb between action beats)
 
 When chaining with `->` in Type 1 effects, the continuation verb can
 serve double duty as both a game instruction and a narrative verb.
@@ -324,7 +324,7 @@ NOTE: Narrative Bridge Verbs are a Type 1 tool. Types 2–4 do not use
 `->` chains or bridge verbs. Their flavor uses the Premise/
 Embedded system instead.
 
-8. Choose one of the Architectural Structures for each effect
+### 8. Choose one of the Architectural Structures for each effect
 
 ### 8A. Type 1 — Action Effects
 (Things that happen when the card is played/activated)
@@ -892,7 +892,6 @@ When I am dealt damage, I may discard 1 card; when I do, I Gain Universal Guard 
 
 Type 4 — Multi-part trigger (premise flavor):
 [Pain sharpens my resolve, and thus] when I am dealt damage, I may discard 1 card; when I do, I Gain Universal Guard equal to that card's cost.
-
 
 
 

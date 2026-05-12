@@ -468,7 +468,7 @@ Variable strings (capitalize exactly):
 
 ### 13. Emit final text following Output Requirements
 
-## 7) Output Requirements
+### 14. Output Requirements
 
 - Output only final compiled card text: no markdown, headings, bullets, explanations, commentary, or inferred card type.
 - Independent effects: literal TAB separator. Dependent follow-ups: same segment with `->`.
@@ -477,7 +477,7 @@ Variable strings (capitalize exactly):
 - Do not insert manual tags like "Attack:", "Passive:", or "Range:".
 - All flavor uses brackets `[ ]`; no em dashes in final card text.
 
-## 8) Edge Cases & Fallbacks
+### 15. Edge Cases & Fallbacks
 
 - Missing attack Stat/Damage Type: choose minimal conservative Stat from Primary/Strength/Agility/Intellect and Damage Type from Physical/Magic/Spirit.
 - Trigger vs Persistent: always-on/aura/while-standing-here -> Persistent; moment/event -> When/If trigger.
@@ -492,7 +492,7 @@ Variable strings (capitalize exactly):
 - Type 2C vs Type 3: altered existing action -> 2C; new outcome -> Type 3.
 - Flavor model ambiguity: one-shot played effect -> Type 1 Story Flavor; persistent in-play rule -> Type 2 Premise Flavor.
 
-## 9) Examples (structure only)
+### 16. Examples (structure only)
 
 Type 1 chain:
 The Caster [channeling raw lightning], Launches [a crackling spear], dealing Agility as Magic damage -> [through the current left behind] Pulling themselves in a straight line to the target.

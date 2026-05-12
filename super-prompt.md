@@ -29,6 +29,7 @@ If any field is missing, proceed using the remaining inputs (default: USER MESSA
 - All flavor text in the final output must be enclosed in square brackets: [flavor here]
 - Brackets visually and programmatically separate flavor from mechanical text.
 - A single effect segment may contain multiple flavor brackets placed anywhere in the sentence where they narratively fit.
+- Do not place flavor as a trailing coda after a complete mechanical rule or completed dependent follow-up; tailing flavor such as `rule text [as consequence flavor].` is invalid. Move that flavor before or inside the affected mechanical phrase.
 - Mechanical text (stats, distances, durations, Game Actions, damage types) must never appear inside brackets.
 - Brackets may wrap around, interrupt, or bridge mechanical text — they are woven into the sentence, not bolted onto fixed slots.
 
@@ -111,8 +112,8 @@ b) Proportional Complexity —
    - Complex effect (chain / multi-step): multiple brackets forming a
      cause → consequence arc across the segment.
      e.g., The Caster Launches [a crackling spear of lightning],
-     dealing Agility as Magic damage -> Pulling themselves in a
-     straight line to the target [through the current left behind].
+     dealing Agility as Magic damage -> [through the current left behind]
+     Pulling themselves in a straight line to the target.
 ```
 
 ```other
@@ -138,7 +139,8 @@ c) Evocative Verbs Over Mechanical Terms — Inside brackets (and in
 ```other
 Premise Flavor explains WHY a rule or trigger exists in the fiction, or
 WHAT the ongoing experience of it is. It is worldbuilding, not
-narration. It frames the mechanical rule without interrupting it.
+narration. It frames or embeds into the mechanical rule without becoming
+a trailing coda after the rule is complete.
 ```
 
 ```other
@@ -160,7 +162,7 @@ e) Subject-Rule Interruption Ban — NEVER place a flavor bracket
 ```
 
 ```other
-f) Three Legal Positions for Premise Flavor:
+f) Two Legal Positions for Premise Flavor:
    1. PREMISE (before the rule): A narrative setup that logically
       CAUSES the rule. Uses a bridging word to connect fiction to
       mechanics.
@@ -171,15 +173,7 @@ f) Three Legal Positions for Premise Flavor:
 ```
 
 ```other
-2. JUSTIFICATION (after the rule): An explanatory coda that
-      describes the sensation or appearance of the rule in action.
-      - `Rule statement [flavor justification].`
-      - `Rule statement, [flavor justification].`
-      The justification answers: "What does this look/feel like?"
-```
-
-```other
-3. EMBEDDED (in a non-core position): A flavor bracket placed in
+2. EMBEDDED (in a non-core position): A flavor bracket placed in
       a syntactically safe position that does not interrupt the
       Subject → verb → object core. Legal positions include:
       - After a comma following a "When" clause (before the effect):
@@ -191,7 +185,12 @@ f) Three Legal Positions for Premise Flavor:
       - Inside a prepositional phrase that is not the rule's core:
         `I may use a Bloom Token [pulsing with life] as the action's
         origin tile.`
-      Use Embedded sparingly; for Type 2C `When` effects, Embedded is preferred over start-of-line Premise flavor when it improves comprehension.
+      Use Embedded when it improves comprehension or when flavor must
+      describe the affected object without becoming tailing flavor. For
+      Type 2C `When` effects, Embedded is preferred over start-of-line
+      Premise flavor when it improves comprehension.
+      Tailing flavor after a complete rule statement is invalid for
+      final card output.
 ```
 
 ```other
@@ -208,7 +207,7 @@ g) The card name is the thesis of all flavor. Every bracket should
      (inciting image); Secondary Motif seeds the closing bracket
      (consequence image).
    - For Premise Flavor (Types 2–4): Primary Motif seeds the premise
-     or justification; Secondary Motif informs the fictional
+     or embedded wording; Secondary Motif informs the fictional
      reason/sensation.
 ```
 
@@ -293,26 +292,33 @@ b) Weaving Patterns (non-exhaustive; choose what reads best):
    - Post-anchor: `Anchor Phrase [flavor], mechanical effect`
    - Mid-chain bridge: `mechanical effect -> [flavor] continuation`
    - Wrapping: `[flavor-start] mechanical text [flavor-end]`
-   - Consequence: `mechanical effect [flavor]`
+   - Integrated consequence: `mechanical effect -> this turn, [flavor] target's Guard, reducing it by the damage dealt.`
    - Conditional/emotional: `-> [but flavor] mechanical effect`
+   Invalid tailing pattern: `mechanical effect [flavor].`
 ```
 
 ```other
 c) Single-Bracket Minimum for Type 1. Two+ preferred for `->` chains.
+d) Type 1 tailing-flavor ban: do not end a Type 1 segment or dependent
+   follow-up with a bracket after the mechanical clause is complete.
+   For dependent debuffs, put the duration first, then comma, then
+   embed flavor before the affected object or state change. Preferred
+   shape: `-> this turn, [flavor] the target's Magic Guard, reducing it
+   by the damage dealt.`
 ```
 
 ```other
---- System B: Premise/Justification Placement (Types 2, 3, 4) ---
+--- System B: Premise/Embedded Placement (Types 2, 3, 4) ---
 ```
 
 ```other
-Flavor brackets occupy one of three legal positions defined in
+Flavor brackets occupy one of two legal positions defined in
 Step 4f. Recap:
    1. PREMISE (formal): `[Flavor premise], and thus rule statement.`
    2. PREMISE (formal): `[Flavor premise], therefore rule statement.`
    3. PREMISE (punctuation): `[Flavor premise;] rule statement.`
-   4. JUSTIFICATION: `Rule statement [flavor justification].`
-   5. EMBEDDED: In a syntactically safe non-core position (rare).
+   4. EMBEDDED: In a syntactically safe non-core position.
+   5. TAILING CODA BAN: `Rule statement [flavor].` is invalid.
 ```
 
 ```other
@@ -324,9 +330,9 @@ d) Subject-Rule Interruption Ban (absolute): No bracket between
 
 ```other
 e) Premise is the DEFAULT position for Types 2–4 when flavor is
-   included. Justification is the secondary choice. Embedded is a
-   rare last resort, EXCEPT Type 2C `When` effects where Embedded
-   flavor immediately after the trigger clause is preferred for
+   included. Embedded is the secondary choice, especially when it keeps
+   the rule readable without tailing flavor. For Type 2C `When` effects,
+   Embedded flavor immediately after the trigger clause is preferred for
    comprehension.
 ```
 
@@ -387,7 +393,7 @@ legal and encouraged when the arc involves a cost or twist.
 ```other
 NOTE: Narrative Bridge Verbs are a Type 1 tool. Types 2–4 do not use
 `->` chains or bridge verbs. Their flavor uses the Premise/
-Justification system instead.
+Embedded system instead.
 ```
 
 1. Choose one of the Architectural Structures for each effect
@@ -456,7 +462,8 @@ Type 1A — Attack Action (Active Present; damage-initiating):
         [Damage Type] damage [Potential unique rule].`
     - With Dependent Follow-Up:
         `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as
-        [Damage Type] damage -> [flavor/bridge/continuation woven].`
+        [Damage Type] damage -> [duration], [flavor woven] [affected
+        object/state], [mechanical continuation].`
     - Literal Number Damage Wording:
         - If the damage amount is a literal number, omit `as` and write
           `dealing [Number] [Damage Type] damage`.
@@ -471,11 +478,11 @@ Type 1A — Attack Action (Active Present; damage-initiating):
           `this turn the target suffers -1 Magic Guard for each damage dealt`.
     - Examples (structure only):
         The Caster Launches [a crackling spear of lightning], dealing
-        Agility as Magic damage -> Pulling themselves in a straight
-        line to the target [through the current left behind].
+        Agility as Magic damage -> [through the current left behind]
+        Pulling themselves in a straight line to the target.
         The Caster Slings [an orb of ionizing electricity], dealing
-        1 Magic damage -> this turn the target's Magic Guard is
-        reduced by the damage dealt [as the voltage has corroded its armor].
+        1 Magic damage -> this turn, [the orb's voltage weakens] the
+        target's Magic Guard, reducing it by the damage dealt.
 ```
 
 ```other
@@ -496,10 +503,10 @@ Type 1B — Anchor Phrase Non-Attack Action (Active Present):
         `[Subject] [Anchor Phrase] [flavor woven], [Effect].`
     - With Dependent Follow-Up:
         `[Subject] [Anchor Phrase] [flavor woven], [Effect] ->
-        [Follow-Up] [flavor woven].`
+        [flavor woven] [Follow-Up].`
     - Example (structure only):
-        The Caster Touches [beneath a veil of frost], this round the target suffers
-        -2 Agility [as ice crawls through their limbs].
+        The Caster Touches [beneath a veil of frost], this round,
+        [ice crawls through] the target suffers -2 Agility.
 ```
 
 ```other
@@ -519,8 +526,8 @@ The Caster [gaining profound insight], draws 2 cards ->
 ```
 
 ```other
-The Caster [amid silver shadow], Moves 2 tiles -> creating
-        a Moonlit Zone at its new location [where pale light pools].
+The Caster [amid silver shadow], Moves 2 tiles -> [where pale light pools]
+        creating a Moonlit Zone at its new location.
         TAB  Moonlit Zone: (The Occupying Hero gains +1 Agility.)
 ```
 
@@ -536,7 +543,7 @@ source card is in play. They do NOT use `->` chaining.
 ```
 
 ```other
-Flavor uses Premise Flavor model (System B: Premise/Justification
+Flavor uses Premise Flavor model (System B: Premise/Embedded
 placement). Flavor is mandatory when a card name is provided;
 otherwise see Step 4j for omission conditions.
 ```
@@ -559,16 +566,15 @@ Type 2A — Static Modifier (Aura):
         - Avoid ambiguous persistent phrasing such as:
           `[Subject] deals +[N] [Damage Type] damage.`
         - Flavor for this structure should default to Premise (start)
-          for readability; Justification (end) is allowed. Do not place flavor between
-          `[Damage Type] damage` and `[Subject] deals`.
+          for readability. Do not place flavor between
+          `[Damage Type] damage` and `[Subject] deals`, and do not
+          append flavor after the completed damage-buff rule.
     - Structure (no flavor):
         `[Target Scope] [State Change].`
     - Structure (with premise flavor):
         `[Flavor premise], and thus [Target Scope] [State Change].`
     - Structure (with premise flavor, concise formal):
         `[Flavor premise], therefore [Target Scope] [State Change].`
-    - Structure (with justification flavor):
-        `[Target Scope] [State Change] [flavor justification].`
     - Examples (structure only):
         Adjacent Heroes gain +1 Intellect.
         Magic damage The Equipped Hero deals is increased by 1.
@@ -581,8 +587,8 @@ Type 2A — Static Modifier (Aura):
 ```
 
 ```other
-Adjacent Heroes gain +1 Intellect [as whispers of insight
-        drift from this location].
+[Whispers of insight drift from this location, and thus] Adjacent
+        Heroes gain +1 Intellect.
 ```
 
 ```other
@@ -600,9 +606,6 @@ Type 2B — Conditional Modifier:
         [State Change].`
     - Structure (with premise flavor, concise formal):
         `[Flavor premise], therefore while [Condition], [Target Scope] [State Change].`
-    - Structure (with justification flavor):
-        `While [Condition], [Target Scope] [State Change] [flavor
-        justification].`
     - Examples (structure only):
         While I have 3 or more Energy, I gain +2 Strength.
 ```
@@ -613,8 +616,8 @@ Type 2B — Conditional Modifier:
 ```
 
 ```other
-While this location has no Obstructions, The Occupying Hero
-        gains +1 Agility [gliding freely across open ground].
+[Open ground invites swift passage, and thus] while this location has
+        no Obstructions, The Occupying Hero gains +1 Agility.
 ```
 
 ```other
@@ -654,9 +657,6 @@ Decision test: "After the trigger resolves, has an existing
         - Then place flavor as an embedded binder before the permission infinitive when it improves comprehension.
         - Preferred pattern (structure only): `When I Attack or Cast, [flavor, allowing me] to [altered rule].`
         - Secondary formal pattern: `I may [altered rule] when I Attack or Cast.`
-    - Structure (with justification flavor):
-        `When [Subject] [Game Action], [altered rule] [flavor
-        justification].`
     - Examples (structure only):
         When I Attack or Cast, I may use a Bloom Token as the
         action's origin tile.
@@ -673,8 +673,8 @@ When The Equipped Hero Moves, it may pass through
 ```
 
 ```other
-When The Equipped Hero Moves, it may pass through
-        Obstructions [phasing between solid forms].
+When The Equipped Hero Moves, [phasing between solid forms, allowing it]
+        to pass through Obstructions.
 ```
 
 ```other
@@ -745,8 +745,6 @@ when a card name is provided; otherwise see Step 4j.
 - Structure (with premise flavor):
     `[Flavor premise], and thus when [Event], [One-Time Effect].`
     `[Flavor premise], therefore when [Event], [One-Time Effect].`
-- Structure (with justification flavor):
-    `When [Event], [One-Time Effect] [flavor justification].`
 - Always separate Trigger clause and Effect clause with a comma.
 - Capitalize Game Actions in the condition/effect when used as
   defined actions (see Dictionary).
@@ -760,7 +758,7 @@ when a card name is provided; otherwise see Step 4j.
 ```
 
 ```other
-When I Move, I Gain 1 Energy [drawn from the trembling ground].
+[The trembling ground lends its strength, and thus] when I Move, I Gain 1 Energy.
 ```
 
 ```other
@@ -898,9 +896,10 @@ Actions/ranges/timing.
 one Dictionary Game Action.
     - Flavor Check (Model B — Types 2–4):
         - If a card name was provided, flavor is present.
-        - If flavor is present, it uses Premise (start) or Justification
-(end) position ONLY — or Embedded in a non-core slot. For Type 2C
-`When` effects, Embedded is preferred for comprehension.
+        - If flavor is present, it uses Premise (start) or Embedded in
+a non-core slot. It must not appear as a tailing coda after a complete
+rule statement. For Type 2C `When` effects, Embedded is preferred for
+comprehension.
         - Subject-Rule Interruption Ban: NO bracket appears between Subject
 and the rule's core verb/permission/condition word.
         - Strip Test: Remove all brackets — does the remaining text read as
@@ -909,6 +908,9 @@ brackets are misplaced or the mechanical text is incomplete.
         - Type 2C Embedded-Binder Exception: The pattern `When ..., [flavor, allowing me/it] to ...`
 is valid when it clearly binds flavor into the permission phrase and improves comprehension.
         - Premise flavor uses a formal bridge into mechanics (`and thus` / `therefore` / `allowing ...`) or punctuation (`;`). Avoid `so` unless explicitly requested.
+        - Tailing Flavor Check: no segment ends with flavor after the
+mechanical clause is complete; relocate that flavor into a premise or
+embedded position.
         - Damage Modifier Clarity: persistent damage buffs use scoped
 construction, preferably premise-first with `increasing ... by [N]`
 (for example, `[Flavor], increasing the Magic damage X deals by 1`)
@@ -962,7 +964,10 @@ When flavor is present, prefer:
 [Damage Type] damage`.
 - Guard reduction from damage dealt: Prefer `[target]'s [Guard Type] is
 reduced by the damage dealt` over `target suffers -1 [Guard Type] for
-each damage dealt`.
+each damage dealt`. When flavor is present in a chained temporary
+Guard reduction, do not append it after the completed rule; use
+`-> this turn, [flavor] the target's [Guard Type], reducing it by the
+damage dealt.`
 - Targeting ambiguity (Anchor-implied single target): If an Anchor Phrase implies a single affected unit (Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch), default to `target` unless the transcript explicitly states a different scope. Do not redundantly add adjacency text already implied by the Anchor Phrase.
 - `->` vs `and` ambiguity: If the second clause depends on the first clause's outcome to define where/what/how much/which, use `->`. Otherwise, use `and` (or a new sentence) within the same segment.
 - Out-of-dictionary synonyms detected: rewrite into the closest exact Dictionary term (e.g., "teleport" → Teleport; "discard pile" → Discard Pile; "obstacle" → Obstruction(s)).
@@ -986,10 +991,10 @@ Type 1C — Simple action:
 The Caster [in a sudden shimmer], Teleports 1 tile.
 
 Type 1A — Flavor introducing the anchor:
-The Caster [channeling raw lightning], Launches [a crackling spear], dealing Agility as Magic damage -> Pulling themselves in a straight line to the target [through the current left behind].
+The Caster [channeling raw lightning], Launches [a crackling spear], dealing Agility as Magic damage -> [through the current left behind] Pulling themselves in a straight line to the target.
 
 Type 1A — Literal number damage + Guard reduction:
-The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> this turn the target's Magic Guard is reduced by the damage dealt [as the voltage has corroded its armor].
+The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> this turn, [the orb's voltage weakens] the target's Magic Guard, reducing it by the damage dealt.
 
 Type 1A — Flavor woven into chained effect:
 The Caster Punches [with burning fury], dealing Strength as Physical damage -> [cracking the] target's [armor], this round the target suffers -1 Physical Guard.
@@ -997,13 +1002,13 @@ The Caster Punches [with burning fury], dealing Strength as Physical damage -> [
 Type 1C — Flavor as emotional transition after arrow:
 The Caster [gaining profound insight], draws 2 cards -> [but overcome with awe] this round it cannot Move.
 
-Type 1B — Flavor split across the chain:
-The Caster Touches [with a whisper of void], target suffers -2 Health [as shadows eat at their form].
+Type 1B — Flavor integrated into the effect:
+The Caster Touches [with a whisper of void], the target [withering under shadow] suffers -2 Health.
 
 Type 1A — Title-driven ("Frostbite Kick"):
 The Caster Kicks [with frozen momentum], dealing Agility as Physical damage -> [flash-freezing the] target [in place], this round it cannot Move.
 
-\--- Type 2: Persistent Effects (Premise Flavor / Premise-Justification Placement) ---
+\--- Type 2: Persistent Effects (Premise Flavor / Premise-Embedded Placement) ---
 
 Type 2A — Static modifier (no flavor, no card name):
 Adjacent Heroes gain +1 Intellect.
@@ -1011,8 +1016,8 @@ Adjacent Heroes gain +1 Intellect.
 Type 2A — Static modifier (premise flavor):
 [A low hum of arcane thought radiates outward, and thus] Adjacent Heroes gain +1 Intellect.
 
-Type 2A — Static modifier (justification flavor):
-Adjacent Heroes gain +1 Intellect [as whispers of insight drift from this location].
+Type 2A — Static modifier (premise flavor):
+[Whispers of insight drift from this location, and thus] Adjacent Heroes gain +1 Intellect.
 
 Type 2B — Conditional modifier (no flavor):
 While I have 3 or more Energy, I gain +2 Strength.
@@ -1026,8 +1031,8 @@ When I Attack or Cast, I may use a Bloom Token as the action's origin tile.
 Type 2C — Rule-altering permission (embedded flavor):
 When I Attack or Cast, [my essence flows through every blossom, allowing me] to use a Bloom Token as the action's origin tile.
 
-Type 2C — Rule-altering permission (justification flavor):
-When The Equipped Hero Moves, it may pass through Obstructions [phasing between solid forms].
+Type 2C — Rule-altering permission (embedded flavor):
+When The Equipped Hero Moves, [phasing between solid forms, allowing it] to pass through Obstructions.
 
 Type 2D — Identity declaration (no flavor):
 This card is always treated as being the Fire Talent in addition to its other Talents.
@@ -1043,8 +1048,8 @@ When I Move, I Gain 1 Energy.
 Type 3 — Reactive trigger (premise flavor):
 [The earth hums beneath each step, and thus] when I Move, I Gain 1 Energy.
 
-Type 3 — Reactive trigger (justification flavor):
-When I Move, I Gain 1 Energy [drawn from the trembling ground].
+Type 3 — Reactive trigger (premise flavor):
+[The trembling ground lends its strength, and thus] when I Move, I Gain 1 Energy.
 
 \--- Type 4: Multi-Part Triggers (Premise Flavor) ---
 

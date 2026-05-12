@@ -75,19 +75,19 @@ If required specifics are missing (card type, stat, damage type, timing, scope, 
     - Skill: played from hand; spell/technique; may include `Response:`. (Presume this if the main context given is the name of an action/ability, i.e., lightning bolt, meteor crash, volt punch.)
     - Arcane Item: equipment/bearer persistent effect.
     - Arcane Field: terrain/tile/location rules; reveal/occupy effects.
-1. Select the correct Voice (Perspective Control):
+3. Select the correct Voice (Perspective Control):
     - Voice A (Hero): subject `I`, present active.
     - Voice B (Skill): subject `The Caster`, present active.
     - Voice C (System: Items/Fields): neutral subjects such as `A Hero`, `Heroes`, `The Hero`, `The Unit`, `Players`, plus:
         - Items: `The Equipped Hero`
         - Fields: `The Occupying Hero`
     - No-You Law (System cards): never use "You/Your" on Items/Fields.
-1. Open-World Flavor Synthesis — Two Flavor Models
+4. Open-World Flavor Synthesis — Two Flavor Models
 
 Every effect CAN carry flavor. But action effects and rule effects need
 fundamentally different approaches.
 
---- Model A: Story Flavor (Type 1 Action Effects) ---
+### 4A. Model A: Story Flavor (Type 1 Action Effects)
 
 Story Flavor tells a micro-story: a cause that leads to a consequence.
 Flavor brackets are the narrative tissue connecting mechanical beats
@@ -120,7 +120,7 @@ c) Evocative Verbs Over Mechanical Terms — Inside brackets (and in
    ambiguity would arise, keep the Dictionary term and add a bracket
    beside it.
 
---- Model B: Premise Flavor (Types 2, 3, 4 Rule/Trigger Effects) ---
+### 4B. Model B: Premise Flavor (Types 2, 3, 4 Rule/Trigger Effects)
 
 Premise Flavor explains WHY a rule or trigger exists in the fiction, or
 WHAT the ongoing experience of it is. It is worldbuilding, not
@@ -150,7 +150,7 @@ f) Two Legal Positions for Premise Flavor:
       - `[Flavor premise;] rule statement.`
       The premise answers: "Why does this rule exist in the fiction?"
 
-2. EMBEDDED (in a non-core position): A flavor bracket placed in
+   2. EMBEDDED (in a non-core position): A flavor bracket placed in
       a syntactically safe position that does not interrupt the
       Subject → verb → object core. Legal positions include:
       - After a comma following a "When" clause (before the effect):
@@ -169,7 +169,7 @@ f) Two Legal Positions for Premise Flavor:
       Tailing flavor after a complete rule statement is invalid for
       final card output.
 
---- Card Name as Plot Seed (applies to BOTH models) ---
+### 4C. Card Name as Plot Seed (applies to Both Models)
 
 g) The card name is the thesis of all flavor. Every bracket should
    feel like it belongs to that card's identity.
@@ -193,7 +193,7 @@ h) Fallback Hierarchy (when card name is absent or abstract):
    2. If mechanics are also too generic, default to a minimal
       neutral-arcane image.
 
---- Flavor Obligation Rules ---
+### 4D. Flavor Obligation Rules
 
 i) Type 1 (Action Effects): Flavor is ALWAYS MANDATORY. Minimum one
    bracket per segment; two+ preferred when using `->`.
@@ -207,7 +207,7 @@ j) Types 2, 3, 4 (Rule/Trigger Effects): Flavor is MANDATORY when a
    - Adding flavor would be redundant padding.
    When in doubt, include flavor.
 
-1. Flavor Bracket Construction Rules (always enforced, both models)
+5. Flavor Bracket Construction Rules (always enforced, both models)
 
 a) Each bracket must be 2–8 words.
 b) Brackets must not contain: numbers, stat names, damage types,
@@ -227,9 +227,9 @@ e) For Premise Flavor (Types 2–4): brackets may also contain
 f) No Example Leakage: Do not borrow 3+ consecutive words from any
    example in this prompt.
 
-1. Flavor Placement Rules — Two Weaving Systems
+6. Flavor Placement Rules — Two Weaving Systems
 
---- System A: Flexible Weaving (Type 1 Action Effects) ---
+### 6A. System A: Flexible Weaving (Type 1 Action Effects)
 
 Flavor brackets are woven into the sentence wherever they best serve
 the narrative arc. They are not confined to fixed slots.
@@ -259,7 +259,7 @@ d) Type 1 tailing-flavor ban: do not end a Type 1 segment or dependent
    shape: `-> this turn, [flavor] the target's Magic Guard, reducing it
    by the damage dealt.`
 
---- System B: Premise/Embedded Placement (Types 2, 3, 4) ---
+### 6B. System B: Premise/Embedded Placement (Types 2, 3, 4)
 
 Flavor brackets occupy one of two legal positions defined in
 Step 4f. Recap:
@@ -290,7 +290,7 @@ f) Connecting Words for Premise: The premise must bridge
    Informality control: avoid `, so` unless the transcript explicitly requests informal diction.
    Do not drop directly from flavor into mechanics without a bridge.
 
---- General (both systems) ---
+### 6C. General Rules for Both Systems
 
 g) Read-Aloud Test: The final sentence (with brackets) should read
    as coherent, fluid prose. For Types 2–4, it must ALSO read as a
@@ -300,7 +300,7 @@ h) Bracket-Free Exception: Type 2–4 effects may omit flavor only
    under the conditions specified in Step 4j (no card name + simple
    + self-explanatory).
 
-1. Narrative Bridge Verbs (Type 1 only — the verb between action beats)
+7. Narrative Bridge Verbs (Type 1 only — the verb between action beats)
 
 When chaining with `->` in Type 1 effects, the continuation verb can
 serve double duty as both a game instruction and a narrative verb.
@@ -324,129 +324,125 @@ NOTE: Narrative Bridge Verbs are a Type 1 tool. Types 2–4 do not use
 `->` chains or bridge verbs. Their flavor uses the Premise/
 Embedded system instead.
 
-1. Choose one of the Architectural Structures for each effect
+8. Choose one of the Architectural Structures for each effect
 
-────────────────────────────────────────────────────────
-TYPE 1 — ACTION EFFECTS
+### 8A. Type 1 — Action Effects
 (Things that happen when the card is played/activated)
-────────────────────────────────────────────────────────
 
-General Rules (apply to 1A, 1B, 1C):
-    - Anchor Phrase must be listed in the Anchor Phrase table below.
-    - Anchor Phrase must appear immediately after Subject (no
-      preamble).
-    - Flavor uses Story Flavor model (System A: Flexible Weaving).
-    - Flavor brackets must fit the context of the effect (card name,
-      element, weak/strong etc.).
-    - Flavor brackets must not contain mechanics, numbers, ranges,
-      targeting logic, or glossary math.
-    - Creating a field/zone places the card itself as an aura where
-      the card hits (touch, call down); when an effect spawns a field
-      it requires a second effect (TAB-separated) to explain what it
-      does.
-    - Field/zone describes the area of effect. Field is a larger area
-      and zone is the tile the card is on.
-    - Anchor-Implied Target Rule (Type 1):
-        - If the Anchor Phrase implies a single affected unit
-          (Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch), refer to it as `target` unless the
-          transcript explicitly states a different scope.
-        - Do not redundantly add adjacency text that is already
-          implied by the Anchor Phrase's range.
-    - Subject Persistence Rule (within a segment):
-        - The segment's opening Subject (I / The Caster / System
-          subject) persists unless a new scope/subject is introduced
-          (e.g., `target`, `A Hero`, `The Occupying Hero`).
-        - Avoid repeating the opening Subject unless required for
-          clarity.
-        - After `->`, use `it` to refer back to the most recently
-          introduced non-Subject entity (e.g., `target`).
-    - `->` Chaining Rules (Type 1):
-        - Use `->` only when the right side depends on the left
-          side's outcome (damage dealt, a unit damaged by this, the
-          new location, the created Field/Zone, etc.).
-        - The text after `->` must be a continuation, not a new
-          independent effect.
-        - Do not repeat the opening Subject immediately after `->`.
-        - After `->`, the continuation must contain a concrete mechanical clause (action, stat change, condition, movement, damage, or target effect).
-        - A flavor bracket alone after `->` is illegal.
-        - If a bracket appears first after `->`, it must grammatically bind into the next mechanical phrase (e.g., `[... through the] target, making it ...`).
-        - Do not use a bare `] target` continuation after a leading bracket; use `the target` or `it` when needed for grammatical coherence.
-        - After `->`, prefer:
-            - a narrative bridge verb + mechanics: `Pulling ... to the target`, `Scattering ... 2 tiles away`, `creating ... at this location`, OR
-            - a dependent new subject + mechanics: `A Hero damaged by this ...`, `target ...`, `it ...`.
-        - Flavor brackets may decorate the continuation but must never be the entire continuation.
-        - Do not place a period immediately before `->`.
-    - `and` Combination Rule (Type 1):
-        - If an added clause is not dependent on the previous clause,
-          keep it in the same segment using `and` or a new sentence.
-          Do not use `->`.
+#### General Rules for Type 1 (apply to 1A, 1B, 1C)
+- Anchor Phrase must be listed in the Anchor Phrase table below.
+- Anchor Phrase must appear immediately after Subject (no
+  preamble).
+- Flavor uses Story Flavor model (System A: Flexible Weaving).
+- Flavor brackets must fit the context of the effect (card name,
+  element, weak/strong etc.).
+- Flavor brackets must not contain mechanics, numbers, ranges,
+  targeting logic, or glossary math.
+- Creating a field/zone places the card itself as an aura where
+  the card hits (touch, call down); when an effect spawns a field
+  it requires a second effect (TAB-separated) to explain what it
+  does.
+- Field/zone describes the area of effect. Field is a larger area
+  and zone is the tile the card is on.
+- Anchor-Implied Target Rule (Type 1):
+    - If the Anchor Phrase implies a single affected unit
+      (Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch), refer to it as `target` unless the
+      transcript explicitly states a different scope.
+    - Do not redundantly add adjacency text that is already
+      implied by the Anchor Phrase's range.
+- Subject Persistence Rule (within a segment):
+    - The segment's opening Subject (I / The Caster / System
+      subject) persists unless a new scope/subject is introduced
+      (e.g., `target`, `A Hero`, `The Occupying Hero`).
+    - Avoid repeating the opening Subject unless required for
+      clarity.
+    - After `->`, use `it` to refer back to the most recently
+      introduced non-Subject entity (e.g., `target`).
+- `->` Chaining Rules (Type 1):
+    - Use `->` only when the right side depends on the left
+      side's outcome (damage dealt, a unit damaged by this, the
+      new location, the created Field/Zone, etc.).
+    - The text after `->` must be a continuation, not a new
+      independent effect.
+    - Do not repeat the opening Subject immediately after `->`.
+    - After `->`, the continuation must contain a concrete mechanical clause (action, stat change, condition, movement, damage, or target effect).
+    - A flavor bracket alone after `->` is illegal.
+    - If a bracket appears first after `->`, it must grammatically bind into the next mechanical phrase (e.g., `[... through the] target, making it ...`).
+    - Do not use a bare `] target` continuation after a leading bracket; use `the target` or `it` when needed for grammatical coherence.
+    - After `->`, prefer:
+        - a narrative bridge verb + mechanics: `Pulling ... to the target`, `Scattering ... 2 tiles away`, `creating ... at this location`, OR
+        - a dependent new subject + mechanics: `A Hero damaged by this ...`, `target ...`, `it ...`.
+    - Flavor brackets may decorate the continuation but must never be the entire continuation.
+    - Do not place a period immediately before `->`.
+- `and` Combination Rule (Type 1):
+    - If an added clause is not dependent on the previous clause,
+      keep it in the same segment using `and` or a new sentence.
+      Do not use `->`.
 
-Type 1A — Attack Action (Active Present; damage-initiating):
-    - Base:
-        `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as
-        [Damage Type] damage [Potential unique rule].`
-    - With Dependent Follow-Up:
-        `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as
-        [Damage Type] damage -> [duration], [flavor woven] [affected
-        object/state], [mechanical continuation].`
-    - Literal Number Damage Wording:
-        - If the damage amount is a literal number, omit `as` and write
-          `dealing [Number] [Damage Type] damage`.
-        - Use `as` only for stat-based damage formulas such as
-          `dealing Strength as Physical damage`.
-        - Never write `dealing [Number] as [Damage Type] damage`.
-    - Damage-Dealt Guard Reduction Wording:
-        - When a follow-up reduces Guard by the damage dealt, prefer
-          possession + reduced-by construction:
-          `this turn the target's Magic Guard is reduced by the damage dealt.`
-        - Prefer this over per-point suffer phrasing such as
-          `this turn the target suffers -1 Magic Guard for each damage dealt`.
-    - Examples (structure only):
-        The Caster Launches [a crackling spear of lightning], dealing
-        Agility as Magic damage -> [through the current left behind]
-        Pulling themselves in a straight line to the target.
-        The Caster Slings [an orb of ionizing electricity], dealing
-        1 Magic damage -> this turn, [the orb's voltage weakens] the
-        target's Magic Guard, reducing it by the damage dealt.
+#### Type 1A — Attack Action (Active Present; damage-initiating)
+- Base:
+    `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as
+    [Damage Type] damage [Potential unique rule].`
+- With Dependent Follow-Up:
+    `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as
+    [Damage Type] damage -> [duration], [flavor woven] [affected
+    object/state], [mechanical continuation].`
+- Literal Number Damage Wording:
+    - If the damage amount is a literal number, omit `as` and write
+      `dealing [Number] [Damage Type] damage`.
+    - Use `as` only for stat-based damage formulas such as
+      `dealing Strength as Physical damage`.
+    - Never write `dealing [Number] as [Damage Type] damage`.
+- Damage-Dealt Guard Reduction Wording:
+    - When a follow-up reduces Guard by the damage dealt, prefer
+      possession + reduced-by construction:
+      `this turn the target's Magic Guard is reduced by the damage dealt.`
+    - Prefer this over per-point suffer phrasing such as
+      `this turn the target suffers -1 Magic Guard for each damage dealt`.
+- Examples (structure only):
+    The Caster Launches [a crackling spear of lightning], dealing
+    Agility as Magic damage -> [through the current left behind]
+    Pulling themselves in a straight line to the target.
+    The Caster Slings [an orb of ionizing electricity], dealing
+    1 Magic damage -> this turn, [the orb's voltage weakens] the
+    target's Magic Guard, reducing it by the damage dealt.
 
 The Caster Kicks [with frozen momentum], dealing Agility as
-        Physical damage -> [flash-freezing the] target [in place],
-        this round it cannot Move.
+    Physical damage -> [flash-freezing the] target [in place],
+    this round it cannot Move.
 
 The Caster Punches [with burning fury], dealing Strength as
-        Physical damage -> [cracking the] target's [armor], this round
-        the target suffers -1 Physical Guard.
+    Physical damage -> [cracking the] target's [armor], this round
+    the target suffers -1 Physical Guard.
 
-Type 1B — Anchor Phrase Non-Attack Action (Active Present):
-    - Base:
-        `[Subject] [Anchor Phrase] [flavor woven], [Effect].`
-    - With Dependent Follow-Up:
-        `[Subject] [Anchor Phrase] [flavor woven], [Effect] ->
-        [flavor woven] [Follow-Up].`
-    - Example (structure only):
-        The Caster Touches [beneath a veil of frost], this round,
-        [ice crawls through] the target suffers -2 Agility.
+#### Type 1B — Anchor Phrase Non-Attack Action (Active Present)
+- Base:
+    `[Subject] [Anchor Phrase] [flavor woven], [Effect].`
+- With Dependent Follow-Up:
+    `[Subject] [Anchor Phrase] [flavor woven], [Effect] ->
+    [flavor woven] [Follow-Up].`
+- Example (structure only):
+    The Caster Touches [beneath a veil of frost], this round,
+    [ice crawls through] the target suffers -2 Agility.
 
-Type 1C — Non-Anchor Phrase Non-Attack Action (Active Present):
-    - Base:
-        `[Subject] [flavor woven], [Effect].`
-    - With Dependent Follow-Up:
-        `[Subject] [flavor woven], [Effect] -> [flavor/continuation
-        woven].`
-    - Examples (structure only):
-        The Caster [in a sudden shimmer], Teleports 1 tile.
+#### Type 1C — Non-Anchor Phrase Non-Attack Action (Active Present)
+- Base:
+    `[Subject] [flavor woven], [Effect].`
+- With Dependent Follow-Up:
+    `[Subject] [flavor woven], [Effect] -> [flavor/continuation
+    woven].`
+- Examples (structure only):
+    The Caster [in a sudden shimmer], Teleports 1 tile.
 
 The Caster [gaining profound insight], draws 2 cards ->
-        [but overcome with awe] this round it cannot Move.
+    [but overcome with awe] this round it cannot Move.
 
 The Caster [amid silver shadow], Moves 2 tiles -> [where pale light pools]
-        creating a Moonlit Zone at its new location.
-        TAB  Moonlit Zone: (The Occupying Hero gains +1 Agility.)
+    creating a Moonlit Zone at its new location.
+    TAB  Moonlit Zone: (The Occupying Hero gains +1 Agility.)
 
-────────────────────────────────────────────────────────
-TYPE 2 — PERSISTENT EFFECTS
+### 8B. Type 2 — Persistent Effects
 (Always-on while the card is in play; not one-shot events)
-────────────────────────────────────────────────────────
 
 Persistent effects are ongoing realities — rules, modifiers,
 permissions, or identity declarations that exist as long as the
@@ -456,131 +452,129 @@ Flavor uses Premise Flavor model (System B: Premise/Embedded
 placement). Flavor is mandatory when a card name is provided;
 otherwise see Step 4j for omission conditions.
 
-Type 2 Disambiguation Test (run before selecting a subtype):
+#### Type 2 Disambiguation Test (run before selecting a subtype)
 - Does it modify a stat or resource with no event scope? → 2A or 2B
 - Does it change HOW an existing game action works? → 2C
 - Does it declare a fact about the card's identity? → 2D
 
-Type 2A — Static Modifier (Aura):
-    A pure state change with no condition. Always on.
-    - Damage Modifier Clarity Rule (persistent):
-        - For ongoing damage buffs, use explicit scoped construction:
-          `[Damage Type] damage [Subject] deals is increased by [N].`
-        - Preferred flavored construction (comprehension + flow):
-          `[Flavor premise], increasing the [Damage Type] damage [Subject] deals by [N].`
-        - Avoid ambiguous persistent phrasing such as:
-          `[Subject] deals +[N] [Damage Type] damage.`
-        - Flavor for this structure should default to Premise (start)
-          for readability. Do not place flavor between
-          `[Damage Type] damage` and `[Subject] deals`, and do not
-          append flavor after the completed damage-buff rule.
-    - Structure (no flavor):
-        `[Target Scope] [State Change].`
-    - Structure (with premise flavor):
-        `[Flavor premise], and thus [Target Scope] [State Change].`
-    - Structure (with premise flavor, concise formal):
-        `[Flavor premise], therefore [Target Scope] [State Change].`
-    - Examples (structure only):
-        Adjacent Heroes gain +1 Intellect.
-        Magic damage The Equipped Hero deals is increased by 1.
-        [Raw power seeps from the weapon into every spell], increasing the Magic damage The Equipped Hero deals by 1.
+#### Type 2A — Static Modifier (Aura)
+A pure state change with no condition. Always on.
+- Damage Modifier Clarity Rule (persistent):
+    - For ongoing damage buffs, use explicit scoped construction:
+      `[Damage Type] damage [Subject] deals is increased by [N].`
+    - Preferred flavored construction (comprehension + flow):
+      `[Flavor premise], increasing the [Damage Type] damage [Subject] deals by [N].`
+    - Avoid ambiguous persistent phrasing such as:
+      `[Subject] deals +[N] [Damage Type] damage.`
+    - Flavor for this structure should default to Premise (start)
+      for readability. Do not place flavor between
+      `[Damage Type] damage` and `[Subject] deals`, and do not
+      append flavor after the completed damage-buff rule.
+- Structure (no flavor):
+    `[Target Scope] [State Change].`
+- Structure (with premise flavor):
+    `[Flavor premise], and thus [Target Scope] [State Change].`
+- Structure (with premise flavor, concise formal):
+    `[Flavor premise], therefore [Target Scope] [State Change].`
+- Examples (structure only):
+    Adjacent Heroes gain +1 Intellect.
+    Magic damage The Equipped Hero deals is increased by 1.
+    [Raw power seeps from the weapon into every spell], increasing the Magic damage The Equipped Hero deals by 1.
 
 [A low hum of arcane thought radiates outward, and thus] Adjacent
-        Heroes gain +1 Intellect.
+    Heroes gain +1 Intellect.
 
 [Whispers of insight drift from this location, and thus] Adjacent
-        Heroes gain +1 Intellect.
+    Heroes gain +1 Intellect.
 
 [Raw power seeps from the weapon into every spell], increasing the
-        Magic damage The Equipped Hero deals by 1.
+    Magic damage The Equipped Hero deals by 1.
 
-Type 2B — Conditional Modifier:
-    A state change that applies while a condition is met.
-    - Structure (no flavor):
-        `While [Condition], [Target Scope] [State Change].`
-    - Structure (with premise flavor):
-        `[Flavor premise], and thus while [Condition], [Target Scope]
-        [State Change].`
-    - Structure (with premise flavor, concise formal):
-        `[Flavor premise], therefore while [Condition], [Target Scope] [State Change].`
-    - Examples (structure only):
-        While I have 3 or more Energy, I gain +2 Strength.
+#### Type 2B — Conditional Modifier
+A state change that applies while a condition is met.
+- Structure (no flavor):
+    `While [Condition], [Target Scope] [State Change].`
+- Structure (with premise flavor):
+    `[Flavor premise], and thus while [Condition], [Target Scope]
+    [State Change].`
+- Structure (with premise flavor, concise formal):
+    `[Flavor premise], therefore while [Condition], [Target Scope] [State Change].`
+- Examples (structure only):
+    While I have 3 or more Energy, I gain +2 Strength.
 
 [Raw energy coils within my limbs, and thus] while I have 3 or
-        more Energy, I gain +2 Strength.
+    more Energy, I gain +2 Strength.
 
 [Open ground invites swift passage, and thus] while this location has
-        no Obstructions, The Occupying Hero gains +1 Agility.
+    no Obstructions, The Occupying Hero gains +1 Agility.
 
-Type 2C — Rule-Altering Permission/Override:
-    Persistently changes HOW an existing game action or rule works.
-    Uses "when" to define the SCOPE of the altered rule — the "when"
-    answers "during which action does this altered rule apply?" It
-    does NOT fire a one-time effect.
+#### Type 2C — Rule-Altering Permission/Override
+Persistently changes HOW an existing game action or rule works.
+Uses "when" to define the SCOPE of the altered rule — the "when"
+answers "during which action does this altered rule apply?" It
+does NOT fire a one-time effect.
 
 KEY DISTINCTION FROM TYPE 3: Type 2C MODIFIES an existing action
-    (changes where/how/what stat/what origin/what path/what target
-    pool). Type 3 PRODUCES a new one-time effect in response to an
-    event (gain resource, deal damage, draw, create token).
+(changes where/how/what stat/what origin/what path/what target
+pool). Type 3 PRODUCES a new one-time effect in response to an
+event (gain resource, deal damage, draw, create token).
 
 Decision test: "After the trigger resolves, has an existing
-    action been ALTERED, or has a NEW effect been PRODUCED?"
-    - Altered → Type 2C
-    - Produced → Type 3
+action been ALTERED, or has a NEW effect been PRODUCED?"
+- Altered → Type 2C
+- Produced → Type 3
 
 - Structure (no flavor):
-        `When [Subject] [Game Action/Condition], [altered rule].`
-    - Structure (with embedded flavor, preferred for Type 2C `When` effects):
-        `When [Subject] [Game Action/Condition], [flavor, allowing subject-pronoun] to [altered rule].`
-    - Structure (with premise flavor, secondary):
-        `[Flavor premise], and thus when [Subject] [Game Action],
-        [altered rule].`
-    - Structure (with premise flavor, permission-forward Type 2C):
-        `[Flavor premise], allowing [Subject] to [altered rule with timing scope placed where most fluent].`
-    - Type 2C clause-order and readability preference:
-        - For `When`-scoped permission overrides, prefer keeping `When [trigger]` first.
-        - Then place flavor as an embedded binder before the permission infinitive when it improves comprehension.
-        - Preferred pattern (structure only): `When I Attack or Cast, [flavor, allowing me] to [altered rule].`
-        - Secondary formal pattern: `I may [altered rule] when I Attack or Cast.`
-    - Examples (structure only):
-        When I Attack or Cast, I may use a Bloom Token as the
-        action's origin tile.
+    `When [Subject] [Game Action/Condition], [altered rule].`
+- Structure (with embedded flavor, preferred for Type 2C `When` effects):
+    `When [Subject] [Game Action/Condition], [flavor, allowing subject-pronoun] to [altered rule].`
+- Structure (with premise flavor, secondary):
+    `[Flavor premise], and thus when [Subject] [Game Action],
+    [altered rule].`
+- Structure (with premise flavor, permission-forward Type 2C):
+    `[Flavor premise], allowing [Subject] to [altered rule with timing scope placed where most fluent].`
+- Type 2C clause-order and readability preference:
+    - For `When`-scoped permission overrides, prefer keeping `When [trigger]` first.
+    - Then place flavor as an embedded binder before the permission infinitive when it improves comprehension.
+    - Preferred pattern (structure only): `When I Attack or Cast, [flavor, allowing me] to [altered rule].`
+    - Secondary formal pattern: `I may [altered rule] when I Attack or Cast.`
+- Examples (structure only):
+    When I Attack or Cast, I may use a Bloom Token as the
+    action's origin tile.
 
 When I Attack or Cast, [my essence flows through every blossom, allowing me] to
-        use a Bloom Token as the action's origin tile.
+    use a Bloom Token as the action's origin tile.
 
 When The Equipped Hero Moves, it may pass through
-        Obstructions.
+    Obstructions.
 
 When The Equipped Hero Moves, [phasing between solid forms, allowing it]
-        to pass through Obstructions.
+    to pass through Obstructions.
 
-Type 2D — Identity/Meta Declaration:
-    Declares a persistent fact about the card itself or its holder.
-    No trigger, no condition — a reality statement about identity or
-    classification.
-    - Structure (no flavor):
-        `[Subject/This card] is always [declaration].`
-    - Structure (with premise flavor):
-        `[Flavor premise;] [Subject/This card] is always
-        [declaration].`
-    - Examples (structure only):
-        This card is always treated as being the Fire Talent in
-        addition to its other Talents.
+#### Type 2D — Identity/Meta Declaration
+Declares a persistent fact about the card itself or its holder.
+No trigger, no condition — a reality statement about identity or
+classification.
+- Structure (no flavor):
+    `[Subject/This card] is always [declaration].`
+- Structure (with premise flavor):
+    `[Flavor premise;] [Subject/This card] is always
+    [declaration].`
+- Examples (structure only):
+    This card is always treated as being the Fire Talent in
+    addition to its other Talents.
 
 [Flames smolder at the core of this spell;] this card is
-        always treated as being the Fire Talent in addition to its
-        other Talents.
+    always treated as being the Fire Talent in addition to its
+    other Talents.
 
 I am always considered Adjacent to all allied Bloom Tokens.
 
 [Living roots bind me to every blossom —] I am always
-        considered Adjacent to all allied Bloom Tokens.
+    considered Adjacent to all allied Bloom Tokens.
 
-────────────────────────────────────────────────────────
-TYPE 3 — REACTIVE TRIGGER
+### 8C. Type 3 — Reactive Trigger
 (Event → one-time response, fires each occurrence)
-────────────────────────────────────────────────────────
 
 A one-shot effect that fires each time a specific event occurs. The
 trigger is an EVENT (something that happens at a discrete moment),
@@ -589,6 +583,8 @@ modification of the triggering action itself.
 
 KEY DISTINCTION FROM TYPE 2C: Type 3 PRODUCES something new (gain
 Energy, deal damage, draw a card, create a token, impose a debuff).
+#### Type 2C vs Type 3 Boundary
+
 Type 2C MODIFIES how an existing action works (change origin, change
 stat, grant passage, alter targeting).
 
@@ -601,36 +597,34 @@ Flavor uses Premise Flavor model (System B). Flavor is mandatory
 when a card name is provided; otherwise see Step 4j.
 
 - Structure (no flavor):
-    `When [Event], [One-Time Effect].`
-    `If [Check], [One-Time Effect].`
+`When [Event], [One-Time Effect].`
+`If [Check], [One-Time Effect].`
 - Structure (with premise flavor):
-    `[Flavor premise], and thus when [Event], [One-Time Effect].`
-    `[Flavor premise], therefore when [Event], [One-Time Effect].`
+`[Flavor premise], and thus when [Event], [One-Time Effect].`
+`[Flavor premise], therefore when [Event], [One-Time Effect].`
 - Always separate Trigger clause and Effect clause with a comma.
 - Capitalize Game Actions in the condition/effect when used as
   defined actions (see Dictionary).
 - Examples (structure only):
-    When I Move, I Gain 1 Energy.
+When I Move, I Gain 1 Energy.
 
 [The earth hums beneath each step, and thus] when I Move, I Gain 1
-    Energy.
+Energy.
 
 [The trembling ground lends its strength, and thus] when I Move, I Gain 1 Energy.
 
 When The Equipped Hero takes Magic damage, this round it Gains 1 Magic Guard.
 
 [Warding runes flare under duress, and thus] when The Equipped Hero
-    takes Magic damage, this round it Gains 1 Magic Guard.
+takes Magic damage, this round it Gains 1 Magic Guard.
 
 If a Hero enters this location, it loses 1 Energy.
 
 [A draining mist clings to this location, and thus] if a Hero enters
-    this location, it loses 1 Energy.
+this location, it loses 1 Energy.
 
-────────────────────────────────────────────────────────
-TYPE 4 — MULTI-PART TRIGGER
+### 8D. Type 4 — Multi-Part Trigger
 (Compound reactive: setup → confirmation → payoff)
-────────────────────────────────────────────────────────
 
 A trigger with a setup phase and a confirmation payoff. The first
 clause grants a permission or begins a state change; the second
@@ -641,27 +635,27 @@ Flavor uses Premise Flavor model (System B). Flavor is mandatory
 when a card name is provided; otherwise see Step 4j.
 
 - Structure (no flavor):
-    `When [Trigger], [Permission/State Change]; when [Confirmation],
-    [Payoff].`
+`When [Trigger], [Permission/State Change]; when [Confirmation],
+[Payoff].`
 - Structure (with premise flavor):
-    `[Flavor premise], and thus when [Trigger], [Permission/State Change];
-    when [Confirmation], [Payoff].`
-    `[Flavor premise], therefore when [Trigger], [Permission/State Change];
-    when [Confirmation], [Payoff].`
+`[Flavor premise], and thus when [Trigger], [Permission/State Change];
+when [Confirmation], [Payoff].`
+`[Flavor premise], therefore when [Trigger], [Permission/State Change];
+when [Confirmation], [Payoff].`
 - Must use a semicolon (;) between setup and payoff.
 - Use a clear pivot confirmation such as "when I do," / "when they
   do," / "when that happens," matching Voice and subject.
 - An attack can also be multi-part; it just won't start with a
   trigger.
 - Examples (structure only):
-    When I am dealt damage, I may discard 1 card; when I do, I Gain
-    Universal Guard equal to that card's cost.
+When I am dealt damage, I may discard 1 card; when I do, I Gain
+Universal Guard equal to that card's cost.
 
 [Pain sharpens my resolve, and thus] when I am dealt damage, I may
-    discard 1 card; when I do, I Gain Universal Guard equal to that card's
-    cost.
+discard 1 card; when I do, I Gain Universal Guard equal to that card's
+cost.
 
-1. Apply the InDesign Dictionary (Automation Keys) exactly (no synonyms):
+9. Apply the InDesign Dictionary (Automation Keys) exactly (no synonyms):
 
 | **Anchor Phrase Words** | **Attack (deal damage)** | **non-attack (cannot deal damage)** | **Supplementary (can be added to other attacks/non attacks)** | **Melee/Ranged** | **Distance**                         | **Damage Type Physical/Magic/Spirit** | **Projectile (straight line, stops at first hit)** | **Piercing** |
 | ----------------------- | ------------------------ | ----------------------------------- | ------------------------------------------------------------- | ---------------- | ------------------------------------ | ------------------------------------- | -------------------------------------------------- | ------------ |
@@ -681,93 +675,93 @@ when a card name is provided; otherwise see Step 4j.
 | Pounce                  |                          |                                     | to move before the main action (pounce 2 tiles, then punch)   |                  |                                      |                                       |                                                    |              |
 | Beam                    |                          |                                     | projectile attacks pierce (sling a beam of lighting)          |                  |                                      |                                       |                                                    |              |
 
-    - Variable Strings (capitalize exactly):
-        - Stats: Primary, Strength, Agility, Intellect
-        - Resources: Health, Universal Guard, Physical Guard, Magic Guard, Spirit Guard, Energy, Overcharge, Arcane Power
-        - Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport
-        - Zones: Hand, Deck, Discard Pile
-        - Objects: Obstructions, Bloom Token
-    - Spatial Glossary (capitalize exactly):
-        - Adjacent (orthogonal 4), Surrounding (8), Radius X, Drift, Obstruction(s)
-        - Fields self-reference: use `this location` (never "this card", never "me").
-1. Enforce Neutrality & Ownership (System cards)
-    - Replace "you/your" with neutral constructions:
-        - "players may …", "A Hero …", "Heroes …", "The Equipped Hero …", "The Occupying Hero …"
-    - Fields:
-        - Never "this card"; always `this location`.
-        - Prefer The Occupying Hero for on-tile effects.
-1. Format durations precisely
-    - Short duration uses `this turn [subject] [effect]`.
-    - Long duration uses `this round [subject] [effect]`.
-    - Permanent duration uses `permanently [subject] [effect]`.
-    - Duration wording must appear at the start of the affected clause, immediately before that clause's subject.
-    - Canonical examples: `this turn the target suffers -1 Magic Guard.`, `this round the target suffers -1 Magic Guard.`, `permanently the target suffers -1 Magic Guard.`
-1. Run the "Compiler" checklist internally before output
-    - Voice correct (I vs The Caster vs System neutral)?
-    - Tense: actions are present active (no "will").
-    - Anchor Phrase is approved and placed immediately after subject
+- Variable Strings (capitalize exactly):
+    - Stats: Primary, Strength, Agility, Intellect
+    - Resources: Health, Universal Guard, Physical Guard, Magic Guard, Spirit Guard, Energy, Overcharge, Arcane Power
+    - Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport
+    - Zones: Hand, Deck, Discard Pile
+    - Objects: Obstructions, Bloom Token
+- Spatial Glossary (capitalize exactly):
+    - Adjacent (orthogonal 4), Surrounding (8), Radius X, Drift, Obstruction(s)
+    - Fields self-reference: use `this location` (never "this card", never "me").
+10. Enforce Neutrality & Ownership (System cards)
+- Replace "you/your" with neutral constructions:
+    - "players may …", "A Hero …", "Heroes …", "The Equipped Hero …", "The Occupying Hero …"
+- Fields:
+    - Never "this card"; always `this location`.
+    - Prefer The Occupying Hero for on-tile effects.
+11. Format durations precisely
+- Short duration uses `this turn [subject] [effect]`.
+- Long duration uses `this round [subject] [effect]`.
+- Permanent duration uses `permanently [subject] [effect]`.
+- Duration wording must appear at the start of the affected clause, immediately before that clause's subject.
+- Canonical examples: `this turn the target suffers -1 Magic Guard.`, `this round the target suffers -1 Magic Guard.`, `permanently the target suffers -1 Magic Guard.`
+12. Run the "Compiler" checklist internally before output
+- Voice correct (I vs The Caster vs System neutral)?
+- Tense: actions are present active (no "will").
+- Anchor Phrase is approved and placed immediately after subject
 (Type 1 only).
-    - Variables/actions/zones/objects are capitalized exactly.
-    - No "You/Your" on Items/Fields; Field self-references are `this location`.
-    - Damage math matches required formats where used.
-    - Damage Wording Check: literal numbers use `dealing [Number] [Damage Type] damage`; only stat-based formulas use `dealing [Stat] as [Damage Type] damage`.
-    - Guard Reduction Check: when an effect scales Guard reduction from damage dealt, prefer `[target]'s [Guard Type] is reduced by the damage dealt` over `suffers -1 [Guard Type] for each damage dealt`.
-    - Duration Check: temporary effects use `this turn [subject] [effect]` or `this round [subject] [effect]`; permanent effects use `permanently [subject] [effect]`. No `(Current Turn)` or `(Current Round)` tags remain in final output.
-    - Type Classification Check:
-        - Does the effect happen once when played/activated? → Type 1
-        - Is it always-on while the card is in play?
-            - Pure stat change, no condition? → Type 2A
-            - Stat change gated by a condition? → Type 2B
-            - Modifies HOW an existing action works? → Type 2C
-            - Declares a fact about card identity? → Type 2D
-        - Does an event PRODUCE a new one-time effect? → Type 3
-        - Does it have a setup + confirmation + payoff? → Type 4
-        - 2C vs 3 Decision Test: "After the trigger, was an existing action
+- Variables/actions/zones/objects are capitalized exactly.
+- No "You/Your" on Items/Fields; Field self-references are `this location`.
+- Damage math matches required formats where used.
+- Damage Wording Check: literal numbers use `dealing [Number] [Damage Type] damage`; only stat-based formulas use `dealing [Stat] as [Damage Type] damage`.
+- Guard Reduction Check: when an effect scales Guard reduction from damage dealt, prefer `[target]'s [Guard Type] is reduced by the damage dealt` over `suffers -1 [Guard Type] for each damage dealt`.
+- Duration Check: temporary effects use `this turn [subject] [effect]` or `this round [subject] [effect]`; permanent effects use `permanently [subject] [effect]`. No `(Current Turn)` or `(Current Round)` tags remain in final output.
+- Type Classification Check:
+    - Does the effect happen once when played/activated? → Type 1
+    - Is it always-on while the card is in play?
+        - Pure stat change, no condition? → Type 2A
+        - Stat change gated by a condition? → Type 2B
+        - Modifies HOW an existing action works? → Type 2C
+        - Declares a fact about card identity? → Type 2D
+    - Does an event PRODUCE a new one-time effect? → Type 3
+    - Does it have a setup + confirmation + payoff? → Type 4
+    - 2C vs 3 Decision Test: "After the trigger, was an existing action
 ALTERED or a NEW effect PRODUCED?" Altered → 2C. Produced → 3.
-    - Flavor Check (Model A — Type 1, mandatory):
-        - Every Type 1 segment has at least one flavor bracket woven
+- Flavor Check (Model A — Type 1, mandatory):
+    - Every Type 1 segment has at least one flavor bracket woven
 naturally.
-        - Segments using `->` preferably have two or more brackets.
-        - Each bracket is 2–8 words with no mechanics/numbers/stats/Game
+    - Segments using `->` preferably have two or more brackets.
+    - Each bracket is 2–8 words with no mechanics/numbers/stats/Game
 Actions/ranges/timing.
-        - Brackets are anchored to card name motifs or mechanic category.
-        - Brackets form a cause → consequence narrative arc.
-        - Any narrative bridge verb after `->` unambiguously implies exactly
+    - Brackets are anchored to card name motifs or mechanic category.
+    - Brackets form a cause → consequence narrative arc.
+    - Any narrative bridge verb after `->` unambiguously implies exactly
 one Dictionary Game Action.
-    - Flavor Check (Model B — Types 2–4):
-        - If a card name was provided, flavor is present.
-        - If flavor is present, it uses Premise (start) or Embedded in
+- Flavor Check (Model B — Types 2–4):
+    - If a card name was provided, flavor is present.
+    - If flavor is present, it uses Premise (start) or Embedded in
 a non-core slot. It must not appear as a tailing coda after a complete
 rule statement. For Type 2C `When` effects, Embedded is preferred for
 comprehension.
-        - Subject-Rule Interruption Ban: NO bracket appears between Subject
+    - Subject-Rule Interruption Ban: NO bracket appears between Subject
 and the rule's core verb/permission/condition word.
-        - Strip Test: Remove all brackets — does the remaining text read as
+    - Strip Test: Remove all brackets — does the remaining text read as
 a complete, grammatically correct, unambiguous rule? If not, the
 brackets are misplaced or the mechanical text is incomplete.
-        - Type 2C Embedded-Binder Exception: The pattern `When ..., [flavor, allowing me/it] to ...`
+    - Type 2C Embedded-Binder Exception: The pattern `When ..., [flavor, allowing me/it] to ...`
 is valid when it clearly binds flavor into the permission phrase and improves comprehension.
-        - Premise flavor uses a formal bridge into mechanics (`and thus` / `therefore` / `allowing ...`) or punctuation (`;`). Avoid `so` unless explicitly requested.
-        - Tailing Flavor Check: no segment ends with flavor after the
+    - Premise flavor uses a formal bridge into mechanics (`and thus` / `therefore` / `allowing ...`) or punctuation (`;`). Avoid `so` unless explicitly requested.
+    - Tailing Flavor Check: no segment ends with flavor after the
 mechanical clause is complete; relocate that flavor into a premise or
 embedded position.
-        - Damage Modifier Clarity: persistent damage buffs use scoped
+    - Damage Modifier Clarity: persistent damage buffs use scoped
 construction, preferably premise-first with `increasing ... by [N]`
 (for example, `[Flavor], increasing the Magic damage X deals by 1`)
 instead of ambiguous `deals +1 Magic damage` phrasing.
-    - No example phrasing reused (Example Quarantine Check).
-    - Fluency Check: Read the full segment as prose. Type 1 should flow as
+- No example phrasing reused (Example Quarantine Check).
+- Fluency Check: Read the full segment as prose. Type 1 should flow as
 a natural sentence with brackets woven in. Types 2–4 should read as
 a clean rule with an optional narrative frame.
-    - Segmentation Check:
-        - Independent effects use TAB separation.
-        - Dependent follow-ups stay in the same segment and use `->`.
-        - Unrelated additions use `and` or a new sentence, not `->`.
-        - `->` never repeats the opening Subject immediately after arrow.
-        - Types 2–4 never use `->`.
-    - Targeting Check: For Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch, default to `target` unless a
+- Segmentation Check:
+    - Independent effects use TAB separation.
+    - Dependent follow-ups stay in the same segment and use `->`.
+    - Unrelated additions use `and` or a new sentence, not `->`.
+    - `->` never repeats the opening Subject immediately after arrow.
+    - Types 2–4 never use `->`.
+- Targeting Check: For Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch, default to `target` unless a
 different scope is explicitly required.
-1. Emit final text following Output Requirements.
+13. Emit final text following Output Requirements.
 
 ## 7) Output Requirements
 

@@ -248,14 +248,22 @@ c) Legal weaving positions include pre-action, post-anchor, mid-chain,
    wrapping, and after `->`, provided the Removable or Bridge test
    passes.
 
-d) Never split a mechanical keyword, variable string, number, range,
+d) Consequence Continuation Pattern: When a dependent follow-up after
+   `->` has flavor and a duration, prefer:
+   `-> [consequence flavor] this turn, [subject] [effect].`
+   The flavor introduces the fictional consequence; the duration then
+   scopes a complete mechanical sentence. Use the same pattern for
+   `this round`; use `permanently [subject] [effect]` for permanent
+   consequences.
+
+e) Never split a mechanical keyword, variable string, number, range,
    duration phrase, or Game Action with flavor.
 
-e) No effect segment may end with flavor. A dependent follow-up also
+f) No effect segment may end with flavor. A dependent follow-up also
    cannot end with flavor. Move tail flavor into an earlier premise,
    bridge, or embedded position.
 
-f) Single-Bracket Minimum for Type 1. Two+ preferred for `->` chains.
+g) Single-Bracket Minimum for Type 1. Two+ preferred for `->` chains.
 
 #### 6.6B System B: Premise/Embedded Placement (Types 2, 3, 4)
 
@@ -342,18 +350,18 @@ Embedded system instead.
 - Anchor-implied single target: Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch default to `target`; do not restate implied adjacency/range.
 - Subject persists within a segment. Avoid repeating opening Subject; after `->`, use `it` for the most recent non-Subject entity when clear.
 - `->` only for dependent continuations. Continuation must contain mechanics, not bracket-only flavor, and must not repeat opening Subject or follow a period.
-- If a bracket appears first after `->`, it must bind grammatically into the next mechanical phrase; avoid bare `] target`.
+- If a bracket appears first after `->`, it may introduce the fictional consequence before the duration; it must still pass the Syntactic Integration Test.
 - If a clause is not dependent, use `and` or a new sentence, not `->`.
 
 ##### Type 1A — Attack Action (Active Present; damage-initiating)
 
 - Base: `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as [Damage Type] damage [optional rule].`
-- Dependent follow-up: `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as [Damage Type] damage -> [duration], [flavor woven] [affected object/state], [mechanical continuation].`
+- Dependent follow-up: `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as [Damage Type] damage -> [consequence flavor] [duration], [subject] [effect].`
 - Literal damage uses `dealing [Number] [Damage Type] damage`; `as` is only for stat formulas.
-- Guard reduction from damage dealt uses possession + reduced-by wording: `this turn, [flavor] the target's Magic Guard, reducing it by the damage dealt.` Avoid per-point `suffers -1 ... for each damage dealt`.
+- Guard reduction from damage dealt uses scoped passive wording: `[flavor] this turn, the target's Magic Guard is reduced by the damage dealt.` Avoid per-point `suffers -1 ... for each damage dealt`.
 - Canonical chain examples:
     - The Caster Launches [a crackling spear], dealing Agility as Magic damage -> [through the current left behind] Pulling themselves in a straight line to the target.
-    - The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> this turn, [the orb's voltage weakens] the target's Magic Guard, reducing it by the damage dealt.
+    - The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> [as the orb's voltage weakens its aura] this turn, the target's Magic Guard is reduced by the damage dealt.
 
 ##### Type 1B — Anchor Phrase Non-Attack Action (Active Present)
 
@@ -466,11 +474,15 @@ Variable strings (capitalize exactly):
 
 ### 6.11 Format Durations Precisely
 
-- Short duration uses `this turn [subject] [effect]`.
-- Long duration uses `this round [subject] [effect]`.
+- Short duration uses `this turn, [subject] [effect]`.
+- Long duration uses `this round, [subject] [effect]`.
 - Permanent duration uses `permanently [subject] [effect]`.
-- Duration wording must appear at the start of the affected clause, immediately before that clause's subject.
-- Canonical examples: `this turn the target suffers -1 Magic Guard.`, `this round the target suffers -1 Magic Guard.`, `permanently the target suffers -1 Magic Guard.`
+- Duration wording must appear at the start of the mechanical consequence clause, immediately before that clause's subject.
+- For flavored dependent continuations after `->`, flavor may precede
+  the duration: `-> [consequence flavor] this turn, [subject] [effect].`
+  In that shape, the duration still scopes the following mechanical
+  sentence.
+- Canonical examples: `this turn, the target suffers -1 Magic Guard.`, `this round, the target suffers -1 Magic Guard.`, `permanently the target suffers -1 Magic Guard.`
 
 ### 6.12 Run the Compiler Checklist Internally
 
@@ -488,7 +500,7 @@ Variable strings (capitalize exactly):
 
 - Output only final compiled card text: no markdown, headings, bullets, explanations, commentary, or inferred card type.
 - Independent effects: literal TAB separator. Dependent follow-ups: same segment with `->`.
-- `->` output rules: no repeated opening Subject, no period before arrow, explicit mechanical continuation required, bracket-first continuation must bind grammatically.
+- `->` output rules: no repeated opening Subject, no period before arrow, explicit mechanical continuation required. If flavor appears first, prefer `[consequence flavor] this turn, [subject] [effect]` or `[consequence flavor] this round, [subject] [effect]`; for permanent effects use `[consequence flavor] permanently [subject] [effect]`.
 - Field/Zone rules line is its own TAB segment.
 - Do not insert manual tags like "Attack:", "Passive:", or "Range:".
 - All flavor uses brackets `[ ]`; no em dashes in final card text.
@@ -499,7 +511,7 @@ Variable strings (capitalize exactly):
 - Trigger vs Persistent: always-on/aura/while-standing-here -> Persistent; moment/event -> When/If trigger.
 - Persistent damage buff ambiguity: rewrite `deals +1 Magic damage` as `Magic damage [Subject] deals is increased by [N]`; with flavor prefer `[Flavor premise], increasing the [Damage Type] damage [Subject] deals by [N].`
 - Literal damage: `dealing [Number] [Damage Type] damage`, never `dealing [Number] as [Damage Type] damage`.
-- Damage-dealt Guard reduction: `[target]'s [Guard Type] is reduced by the damage dealt`; with chained temporary flavor use `-> this turn, [flavor] the target's [Guard Type], reducing it by the damage dealt.`
+- Damage-dealt Guard reduction: `[target]'s [Guard Type] is reduced by the damage dealt`; with chained temporary flavor use `-> [flavor] this turn, the target's [Guard Type] is reduced by the damage dealt.`
 - Anchor-implied single target: Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch default to `target`; do not restate implied adjacency.
 - `->` vs `and`: dependent outcome -> `->`; otherwise `and` or new sentence.
 - Out-of-dictionary synonyms: rewrite to closest exact Dictionary term.
@@ -514,7 +526,7 @@ Type 1 chain:
 The Caster [channeling raw lightning], Launches [a crackling spear], dealing Agility as Magic damage -> [through the current left behind] Pulling themselves in a straight line to the target.
 
 Literal damage + Guard reduction:
-The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> this turn, [the orb's voltage weakens] the target's Magic Guard, reducing it by the damage dealt.
+The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> [as the orb's voltage weakens its aura] this turn, the target's Magic Guard is reduced by the damage dealt.
 
 Type 2C embedded permission:
 When I Attack or Cast, [my essence flows through every blossom, allowing me] to use a Bloom Token as the action's origin tile.

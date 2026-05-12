@@ -58,6 +58,6 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, do not add a note.
 
 ## Recent Changes
+- 2026-05-12: Compressed `super-prompt.md` by merging duplicate rules, compacting the Dictionary, shortening examples/checklists, and preserving behavior in active rules.
 - 2026-05-12: Promoted main Section 6 labels to Markdown headings so hierarchy survives without code fences.
 - 2026-05-12: Restored Section 6 hierarchy with Markdown headings after removing prose code fences.
-- 2026-05-12: Removed unnecessary fenced code blocks from `super-prompt.md`; ordinary prompt prose should stay as plain Markdown.

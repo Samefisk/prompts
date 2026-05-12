@@ -10,7 +10,9 @@ They must be continuously refined after each user request as understanding impro
 - Prefer rule-level instruction improvements over adding more examples.
 
 ## Change strategy for `super.json`
-- Edit the `prompt` field directly and preserve all non-prompt mode settings unless explicitly requested.
+- For prompt text changes, edit `super-prompt.md` first, then run `node scripts/super-prompt.mjs import` to inject it into the `prompt` field of `super.json`.
+- If `super.json` is edited directly, immediately run `node scripts/super-prompt.mjs export` so `super-prompt.md` stays in sync.
+- Preserve all non-prompt mode settings unless explicitly requested.
 - Prefer targeted, minimal diffs that fix behavior without broad rewrites.
 - Keep terminology consistent across all sections so one rule does not conflict with another.
 - When changing a core convention, update all duplicate sections that restate it (rules, templates, checklist, and examples).
@@ -32,6 +34,7 @@ They must be continuously refined after each user request as understanding impro
 ## Quality checks after every edit
 - Validate there are no contradictory templates across sections.
 - Search for stale phrasing that conflicts with the updated rule set.
+- Run `node scripts/super-prompt.mjs check` before committing prompt changes.
 - Confirm Type 2C wording supports both timing-scope and permission-forward ordering where requested.
 - Ensure flavor and mechanics separation rules still hold.
 
@@ -49,6 +52,7 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
+- 2026-05-12: Process improvement after a slow prompt edit: use `super-prompt.md` as the primary edit surface and sync with `node scripts/super-prompt.mjs import/export/check` to avoid brittle one-line JSON string surgery and GitHub Actions follow-up commits.
 - 2026-05-12: Tailing flavor codas after complete mechanical clauses are no longer allowed; migrate affected rules, templates, checklist language, and examples to premise or embedded flavor, especially chained Guard reductions such as `-> this turn, [flavor] the target's Magic Guard, reducing it by the damage dealt.`
 - 2026-04-15: For literal numeric damage, omit `as` and use `dealing [Number] [Damage Type] damage`; when Guard reduction scales from damage dealt, prefer `[target]'s [Guard Type] is reduced by the damage dealt` over per-point `suffers -1 ... for each damage dealt` phrasing.
 - 2026-03-07: Duration formatting is front-loaded at clause start: `this turn [subject] [effect]`, `this round [subject] [effect]`, and `permanently [subject] [effect]`; do not use `(Current Turn)` or `(Current Round)` tags in final output.

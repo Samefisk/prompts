@@ -13,8 +13,15 @@ Raw prompt URL (always latest):
 
 ## 2) Your maintainer workflow
 
-When you update `super.json`, push to `main`.
-`super-prompt.md` is auto-generated from `super.json` by GitHub Actions.
+When you update the prompt, edit `super-prompt.md`, then run:
+
+```sh
+node scripts/super-prompt.mjs import
+node scripts/super-prompt.mjs check
+```
+
+Commit `super-prompt.md` and `super.json` together, then push to `main`.
+GitHub Actions still exports `super-prompt.md` from `super.json` as a fallback if the Markdown file was not committed.
 
 ## 3) Teammate onboarding (no terminal)
 

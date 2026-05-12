@@ -1063,4 +1063,3 @@ Type 4 — Multi-part trigger (premise flavor):
 
 
 
-

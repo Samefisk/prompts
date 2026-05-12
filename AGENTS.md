@@ -26,7 +26,7 @@ They must be continuously refined after each user request as understanding impro
 - Avoid `so` unless explicitly requested by the user/transcript.
 - Do not use em dashes (`—`) in final card output punctuation.
 - Preserve legal grammar under strip-test requirements (mechanical rule must remain complete when brackets are removed).
-- Do not allow trailing flavor codas after complete mechanical clauses; move flavor into premise or embedded positions.
+- No effect segment may end with flavor; move any tail flavor into premise or embedded positions.
 
 ## Example usage policy
 - Do not rely on examples as the primary control mechanism.
@@ -58,6 +58,6 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, do not add a note.
 
 ## Recent Changes
-- 2026-05-12: For chained Guard reductions, flavor before the Guard phrase must be a complete subject + active transitive verb that grammatically takes the following Guard phrase as its object.
+- 2026-05-12: Replace special-case Guard flavor grammar with the general rule that no effect segment may end with flavor.
 - 2026-05-12: Use nested `6.x` headings inside `## 6) Step-by-Step Process`; reserve document-level `## 7)`, `## 8)`, and `## 9)` for Output Requirements, Edge Cases, and Examples.
 - 2026-05-12: Keep compressed prompt sections on one continuous Markdown heading hierarchy; avoid mixing top-level `##` sections into the internal numbered prompt flow.

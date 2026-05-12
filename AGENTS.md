@@ -32,6 +32,7 @@ They must be continuously refined after each user request as understanding impro
 - Do not rely on examples as the primary control mechanism.
 - Use short structural patterns only when needed; avoid expanding example volume.
 - Ensure instructions are enforceable as rules even if examples are removed.
+- Do not wrap ordinary prompt instructions or examples in fenced code blocks; reserve code fences only for content that truly must render as literal code.
 
 ## Quality checks after every edit
 - Validate there are no contradictory templates across sections.
@@ -56,6 +57,6 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, do not add a note.
 
 ## Recent Changes
+- 2026-05-12: Removed unnecessary fenced code blocks from `super-prompt.md`; ordinary prompt prose should stay as plain Markdown.
 - 2026-05-12: Replaced append-only learning log with compact active-rule updates plus this capped recent-notes section.
 - 2026-05-12: Made `super-prompt.md` the canonical prompt edit surface; sync into `super.json` with `node scripts/super-prompt.mjs import`.
-- 2026-05-12: Banned trailing flavor codas after complete mechanical clauses; use premise or embedded flavor instead.

@@ -84,28 +84,19 @@ If required specifics are missing (card type, stat, damage type, timing, scope, 
     - No-You Law (System cards): never use "You/Your" on Items/Fields.
 1. Open-World Flavor Synthesis — Two Flavor Models
 
-```other
 Every effect CAN carry flavor. But action effects and rule effects need
 fundamentally different approaches.
-```
 
-```other
 --- Model A: Story Flavor (Type 1 Action Effects) ---
-```
 
-```other
 Story Flavor tells a micro-story: a cause that leads to a consequence.
 Flavor brackets are the narrative tissue connecting mechanical beats
 into a coherent "plot."
-```
 
-```other
 a) Plot Over Polish — Every flavor bracket must advance a small
    narrative arc, not just describe an aesthetic. Ask: "What is
    happening in the fiction that causes the next mechanical beat?"
-```
 
-```other
 b) Proportional Complexity —
    - Simple effect (single mechanic, no chain): one short bracket.
      e.g., The Caster [in a sudden shimmer], Teleports 1 tile.
@@ -114,9 +105,7 @@ b) Proportional Complexity —
      e.g., The Caster Launches [a crackling spear of lightning],
      dealing Agility as Magic damage -> [through the current left behind]
      Pulling themselves in a straight line to the target.
-```
 
-```other
 c) Evocative Verbs Over Mechanical Terms — Inside brackets (and in
    narrative bridge verbs like "Pulling"), prefer verbs that IMPLY the
    game action without using the Dictionary term:
@@ -130,27 +119,19 @@ c) Evocative Verbs Over Mechanical Terms — Inside brackets (and in
    simultaneously and the implied Game Action is unambiguous. If
    ambiguity would arise, keep the Dictionary term and add a bracket
    beside it.
-```
 
-```other
 --- Model B: Premise Flavor (Types 2, 3, 4 Rule/Trigger Effects) ---
-```
 
-```other
 Premise Flavor explains WHY a rule or trigger exists in the fiction, or
 WHAT the ongoing experience of it is. It is worldbuilding, not
 narration. It frames or embeds into the mechanical rule without becoming
 a trailing coda after the rule is complete.
-```
 
-```other
 d) The Rule is Sacred — The mechanical rule statement must read as a
    clear, unambiguous, complete rule when all brackets are mentally
    stripped out. Flavor must NEVER interrupt the grammatical core of
    the rule (subject → verb → object/permission/state change).
-```
 
-```other
 e) Subject-Rule Interruption Ban — NEVER place a flavor bracket
    between the Subject and the rule's core verb, permission, or
    condition word. These patterns are ALWAYS WRONG:
@@ -159,9 +140,7 @@ e) Subject-Rule Interruption Ban — NEVER place a flavor bracket
    - `The Equipped Hero [flavor] gains...`
    - `When [flavor] I Attack...`
    The rule must start cleanly.
-```
 
-```other
 f) Two Legal Positions for Premise Flavor:
    1. PREMISE (before the rule): A narrative setup that logically
       CAUSES the rule. Uses a bridging word to connect fiction to
@@ -170,9 +149,7 @@ f) Two Legal Positions for Premise Flavor:
       - `[Flavor premise], therefore rule statement.`
       - `[Flavor premise;] rule statement.`
       The premise answers: "Why does this rule exist in the fiction?"
-```
 
-```other
 2. EMBEDDED (in a non-core position): A flavor bracket placed in
       a syntactically safe position that does not interrupt the
       Subject → verb → object core. Legal positions include:
@@ -191,13 +168,9 @@ f) Two Legal Positions for Premise Flavor:
       Premise flavor when it improves comprehension.
       Tailing flavor after a complete rule statement is invalid for
       final card output.
-```
 
-```other
 --- Card Name as Plot Seed (applies to BOTH models) ---
-```
 
-```other
 g) The card name is the thesis of all flavor. Every bracket should
    feel like it belongs to that card's identity.
    - Name Tokenization: Split the name into a Primary Motif
@@ -209,9 +182,7 @@ g) The card name is the thesis of all flavor. Every bracket should
    - For Premise Flavor (Types 2–4): Primary Motif seeds the premise
      or embedded wording; Secondary Motif informs the fictional
      reason/sensation.
-```
 
-```other
 h) Fallback Hierarchy (when card name is absent or abstract):
    1. Derive flavor from the mechanic category:
       - Stat boost → growth/empowerment image
@@ -221,18 +192,12 @@ h) Fallback Hierarchy (when card name is absent or abstract):
       - Identity → essence/nature image
    2. If mechanics are also too generic, default to a minimal
       neutral-arcane image.
-```
 
-```other
 --- Flavor Obligation Rules ---
-```
 
-```other
 i) Type 1 (Action Effects): Flavor is ALWAYS MANDATORY. Minimum one
    bracket per segment; two+ preferred when using `->`.
-```
 
-```other
 j) Types 2, 3, 4 (Rule/Trigger Effects): Flavor is MANDATORY when a
    card name is provided (the name always supplies motifs). Flavor is
    ENCOURAGED but may be omitted when:
@@ -241,11 +206,9 @@ j) Types 2, 3, 4 (Rule/Trigger Effects): Flavor is MANDATORY when a
      aura with an obvious mechanical purpose), AND
    - Adding flavor would be redundant padding.
    When in doubt, include flavor.
-```
 
 1. Flavor Bracket Construction Rules (always enforced, both models)
 
-```other
 a) Each bracket must be 2–8 words.
 b) Brackets must not contain: numbers, stat names, damage types,
    ranges, distances, tile counts, targeting logic, timing/duration
@@ -263,20 +226,14 @@ e) For Premise Flavor (Types 2–4): brackets may also contain
    valid worldbuilding premise when paired with a formal bridge into mechanics.
 f) No Example Leakage: Do not borrow 3+ consecutive words from any
    example in this prompt.
-```
 
 1. Flavor Placement Rules — Two Weaving Systems
 
-```other
 --- System A: Flexible Weaving (Type 1 Action Effects) ---
-```
 
-```other
 Flavor brackets are woven into the sentence wherever they best serve
 the narrative arc. They are not confined to fixed slots.
-```
 
-```other
 a) Anywhere-Legal Principle: A bracket may appear at any position —
    before a verb, after a verb, around a conjunction, mid-clause,
    after `->`, wrapping mechanical text — as long as:
@@ -284,9 +241,7 @@ a) Anywhere-Legal Principle: A bracket may appear at any position —
    - The bracket does not split a mechanical keyword or variable
      string.
    - The sentence reads as natural prose with brackets included.
-```
 
-```other
 b) Weaving Patterns (non-exhaustive; choose what reads best):
    - Pre-action: `[flavor], mechanical effect`
    - Post-anchor: `Anchor Phrase [flavor], mechanical effect`
@@ -295,9 +250,7 @@ b) Weaving Patterns (non-exhaustive; choose what reads best):
    - Integrated consequence: `mechanical effect -> this turn, [flavor] target's Guard, reducing it by the damage dealt.`
    - Conditional/emotional: `-> [but flavor] mechanical effect`
    Invalid tailing pattern: `mechanical effect [flavor].`
-```
 
-```other
 c) Single-Bracket Minimum for Type 1. Two+ preferred for `->` chains.
 d) Type 1 tailing-flavor ban: do not end a Type 1 segment or dependent
    follow-up with a bracket after the mechanical clause is complete.
@@ -305,13 +258,9 @@ d) Type 1 tailing-flavor ban: do not end a Type 1 segment or dependent
    embed flavor before the affected object or state change. Preferred
    shape: `-> this turn, [flavor] the target's Magic Guard, reducing it
    by the damage dealt.`
-```
 
-```other
 --- System B: Premise/Embedded Placement (Types 2, 3, 4) ---
-```
 
-```other
 Flavor brackets occupy one of two legal positions defined in
 Step 4f. Recap:
    1. PREMISE (formal): `[Flavor premise], and thus rule statement.`
@@ -319,24 +268,18 @@ Step 4f. Recap:
    3. PREMISE (punctuation): `[Flavor premise;] rule statement.`
    4. EMBEDDED: In a syntactically safe non-core position.
    5. TAILING CODA BAN: `Rule statement [flavor].` is invalid.
-```
 
-```other
 d) Subject-Rule Interruption Ban (absolute): No bracket between
    Subject and the rule's core verb/permission/condition. Tested by:
    strip all brackets — does the remaining text read as a complete,
    grammatically correct rule? If not, the bracket is misplaced.
-```
 
-```other
 e) Premise is the DEFAULT position for Types 2–4 when flavor is
    included. Embedded is the secondary choice, especially when it keeps
    the rule readable without tailing flavor. For Type 2C `When` effects,
    Embedded flavor immediately after the trigger clause is preferred for
    comprehension.
-```
 
-```other
 f) Connecting Words for Premise: The premise must bridge
    into mechanics using formal connectors or punctuation:
    - `, and thus` (causal, formal default for this ruleset)
@@ -346,27 +289,19 @@ f) Connecting Words for Premise: The premise must bridge
    Em dash policy: do not use em dashes in final card text.
    Informality control: avoid `, so` unless the transcript explicitly requests informal diction.
    Do not drop directly from flavor into mechanics without a bridge.
-```
 
-```other
 --- General (both systems) ---
-```
 
-```other
 g) Read-Aloud Test: The final sentence (with brackets) should read
    as coherent, fluid prose. For Types 2–4, it must ALSO read as a
    clear, unambiguous rule when brackets are stripped.
-```
 
-```other
 h) Bracket-Free Exception: Type 2–4 effects may omit flavor only
    under the conditions specified in Step 4j (no card name + simple
    + self-explanatory).
-```
 
 1. Narrative Bridge Verbs (Type 1 only — the verb between action beats)
 
-```other
 When chaining with `->` in Type 1 effects, the continuation verb can
 serve double duty as both a game instruction and a narrative verb.
 Choose a verb that:
@@ -376,25 +311,18 @@ Choose a verb that:
     "Pulling themselves to the target" (implies Move toward)
     "Scattering them 2 tiles away" (implies forced movement/Banishes)
     "Flickering to an Adjacent tile" (implies Teleport)
-```
 
-```other
 If no single evocative verb can unambiguously replace the Dictionary
 term, keep the Dictionary term and add a flavor bracket adjacent:
     "-> Teleporting [in a crackling aftershock] to an Adjacent tile."
-```
 
-```other
 Flavor brackets after `->` may also serve as emotional/tonal
 transitions: `[but overcome with awe]`, `[yet frozen by dread]` —
 legal and encouraged when the arc involves a cost or twist.
-```
 
-```other
 NOTE: Narrative Bridge Verbs are a Type 1 tool. Types 2–4 do not use
 `->` chains or bridge verbs. Their flavor uses the Premise/
 Embedded system instead.
-```
 
 1. Choose one of the Architectural Structures for each effect
 
@@ -403,7 +331,6 @@ TYPE 1 — ACTION EFFECTS
 (Things that happen when the card is played/activated)
 ────────────────────────────────────────────────────────
 
-```other
 General Rules (apply to 1A, 1B, 1C):
     - Anchor Phrase must be listed in the Anchor Phrase table below.
     - Anchor Phrase must appear immediately after Subject (no
@@ -453,9 +380,7 @@ General Rules (apply to 1A, 1B, 1C):
         - If an added clause is not dependent on the previous clause,
           keep it in the same segment using `and` or a new sentence.
           Do not use `->`.
-```
 
-```other
 Type 1A — Attack Action (Active Present; damage-initiating):
     - Base:
         `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as
@@ -483,21 +408,15 @@ Type 1A — Attack Action (Active Present; damage-initiating):
         The Caster Slings [an orb of ionizing electricity], dealing
         1 Magic damage -> this turn, [the orb's voltage weakens] the
         target's Magic Guard, reducing it by the damage dealt.
-```
 
-```other
 The Caster Kicks [with frozen momentum], dealing Agility as
         Physical damage -> [flash-freezing the] target [in place],
         this round it cannot Move.
-```
 
-```other
 The Caster Punches [with burning fury], dealing Strength as
         Physical damage -> [cracking the] target's [armor], this round
         the target suffers -1 Physical Guard.
-```
 
-```other
 Type 1B — Anchor Phrase Non-Attack Action (Active Present):
     - Base:
         `[Subject] [Anchor Phrase] [flavor woven], [Effect].`
@@ -507,9 +426,7 @@ Type 1B — Anchor Phrase Non-Attack Action (Active Present):
     - Example (structure only):
         The Caster Touches [beneath a veil of frost], this round,
         [ice crawls through] the target suffers -2 Agility.
-```
 
-```other
 Type 1C — Non-Anchor Phrase Non-Attack Action (Active Present):
     - Base:
         `[Subject] [flavor woven], [Effect].`
@@ -518,44 +435,32 @@ Type 1C — Non-Anchor Phrase Non-Attack Action (Active Present):
         woven].`
     - Examples (structure only):
         The Caster [in a sudden shimmer], Teleports 1 tile.
-```
 
-```other
 The Caster [gaining profound insight], draws 2 cards ->
         [but overcome with awe] this round it cannot Move.
-```
 
-```other
 The Caster [amid silver shadow], Moves 2 tiles -> [where pale light pools]
         creating a Moonlit Zone at its new location.
         TAB  Moonlit Zone: (The Occupying Hero gains +1 Agility.)
-```
 
 ────────────────────────────────────────────────────────
 TYPE 2 — PERSISTENT EFFECTS
 (Always-on while the card is in play; not one-shot events)
 ────────────────────────────────────────────────────────
 
-```other
 Persistent effects are ongoing realities — rules, modifiers,
 permissions, or identity declarations that exist as long as the
 source card is in play. They do NOT use `->` chaining.
-```
 
-```other
 Flavor uses Premise Flavor model (System B: Premise/Embedded
 placement). Flavor is mandatory when a card name is provided;
 otherwise see Step 4j for omission conditions.
-```
 
-```other
 Type 2 Disambiguation Test (run before selecting a subtype):
 - Does it modify a stat or resource with no event scope? → 2A or 2B
 - Does it change HOW an existing game action works? → 2C
 - Does it declare a fact about the card's identity? → 2D
-```
 
-```other
 Type 2A — Static Modifier (Aura):
     A pure state change with no condition. Always on.
     - Damage Modifier Clarity Rule (persistent):
@@ -579,24 +484,16 @@ Type 2A — Static Modifier (Aura):
         Adjacent Heroes gain +1 Intellect.
         Magic damage The Equipped Hero deals is increased by 1.
         [Raw power seeps from the weapon into every spell], increasing the Magic damage The Equipped Hero deals by 1.
-```
 
-```other
 [A low hum of arcane thought radiates outward, and thus] Adjacent
         Heroes gain +1 Intellect.
-```
 
-```other
 [Whispers of insight drift from this location, and thus] Adjacent
         Heroes gain +1 Intellect.
-```
 
-```other
 [Raw power seeps from the weapon into every spell], increasing the
         Magic damage The Equipped Hero deals by 1.
-```
 
-```other
 Type 2B — Conditional Modifier:
     A state change that applies while a condition is met.
     - Structure (no flavor):
@@ -608,41 +505,29 @@ Type 2B — Conditional Modifier:
         `[Flavor premise], therefore while [Condition], [Target Scope] [State Change].`
     - Examples (structure only):
         While I have 3 or more Energy, I gain +2 Strength.
-```
 
-```other
 [Raw energy coils within my limbs, and thus] while I have 3 or
         more Energy, I gain +2 Strength.
-```
 
-```other
 [Open ground invites swift passage, and thus] while this location has
         no Obstructions, The Occupying Hero gains +1 Agility.
-```
 
-```other
 Type 2C — Rule-Altering Permission/Override:
     Persistently changes HOW an existing game action or rule works.
     Uses "when" to define the SCOPE of the altered rule — the "when"
     answers "during which action does this altered rule apply?" It
     does NOT fire a one-time effect.
-```
 
-```other
 KEY DISTINCTION FROM TYPE 3: Type 2C MODIFIES an existing action
     (changes where/how/what stat/what origin/what path/what target
     pool). Type 3 PRODUCES a new one-time effect in response to an
     event (gain resource, deal damage, draw, create token).
-```
 
-```other
 Decision test: "After the trigger resolves, has an existing
     action been ALTERED, or has a NEW effect been PRODUCED?"
     - Altered → Type 2C
     - Produced → Type 3
-```
 
-```other
 - Structure (no flavor):
         `When [Subject] [Game Action/Condition], [altered rule].`
     - Structure (with embedded flavor, preferred for Type 2C `When` effects):
@@ -660,24 +545,16 @@ Decision test: "After the trigger resolves, has an existing
     - Examples (structure only):
         When I Attack or Cast, I may use a Bloom Token as the
         action's origin tile.
-```
 
-```other
 When I Attack or Cast, [my essence flows through every blossom, allowing me] to
         use a Bloom Token as the action's origin tile.
-```
 
-```other
 When The Equipped Hero Moves, it may pass through
         Obstructions.
-```
 
-```other
 When The Equipped Hero Moves, [phasing between solid forms, allowing it]
         to pass through Obstructions.
-```
 
-```other
 Type 2D — Identity/Meta Declaration:
     Declares a persistent fact about the card itself or its holder.
     No trigger, no condition — a reality statement about identity or
@@ -690,55 +567,39 @@ Type 2D — Identity/Meta Declaration:
     - Examples (structure only):
         This card is always treated as being the Fire Talent in
         addition to its other Talents.
-```
 
-```other
 [Flames smolder at the core of this spell;] this card is
         always treated as being the Fire Talent in addition to its
         other Talents.
-```
 
-```other
 I am always considered Adjacent to all allied Bloom Tokens.
-```
 
-```other
 [Living roots bind me to every blossom —] I am always
         considered Adjacent to all allied Bloom Tokens.
-```
 
 ────────────────────────────────────────────────────────
 TYPE 3 — REACTIVE TRIGGER
 (Event → one-time response, fires each occurrence)
 ────────────────────────────────────────────────────────
 
-```other
 A one-shot effect that fires each time a specific event occurs. The
 trigger is an EVENT (something that happens at a discrete moment),
 and the effect is a NEW outcome PRODUCED by that event — not a
 modification of the triggering action itself.
-```
 
-```other
 KEY DISTINCTION FROM TYPE 2C: Type 3 PRODUCES something new (gain
 Energy, deal damage, draw a card, create a token, impose a debuff).
 Type 2C MODIFIES how an existing action works (change origin, change
 stat, grant passage, alter targeting).
-```
 
-```other
 Decision test: "After the trigger resolves, has an existing action
 been ALTERED, or has a NEW effect been PRODUCED?"
 - Altered → Type 2C
 - Produced → Type 3
-```
 
-```other
 Flavor uses Premise Flavor model (System B). Flavor is mandatory
 when a card name is provided; otherwise see Step 4j.
-```
 
-```other
 - Structure (no flavor):
     `When [Event], [One-Time Effect].`
     `If [Check], [One-Time Effect].`
@@ -750,53 +611,35 @@ when a card name is provided; otherwise see Step 4j.
   defined actions (see Dictionary).
 - Examples (structure only):
     When I Move, I Gain 1 Energy.
-```
 
-```other
 [The earth hums beneath each step, and thus] when I Move, I Gain 1
     Energy.
-```
 
-```other
 [The trembling ground lends its strength, and thus] when I Move, I Gain 1 Energy.
-```
 
-```other
 When The Equipped Hero takes Magic damage, this round it Gains 1 Magic Guard.
-```
 
-```other
 [Warding runes flare under duress, and thus] when The Equipped Hero
     takes Magic damage, this round it Gains 1 Magic Guard.
-```
 
-```other
 If a Hero enters this location, it loses 1 Energy.
-```
 
-```other
 [A draining mist clings to this location, and thus] if a Hero enters
     this location, it loses 1 Energy.
-```
 
 ────────────────────────────────────────────────────────
 TYPE 4 — MULTI-PART TRIGGER
 (Compound reactive: setup → confirmation → payoff)
 ────────────────────────────────────────────────────────
 
-```other
 A trigger with a setup phase and a confirmation payoff. The first
 clause grants a permission or begins a state change; the second
 clause fires the payoff when the permission is exercised or the
 state is confirmed.
-```
 
-```other
 Flavor uses Premise Flavor model (System B). Flavor is mandatory
 when a card name is provided; otherwise see Step 4j.
-```
 
-```other
 - Structure (no flavor):
     `When [Trigger], [Permission/State Change]; when [Confirmation],
     [Payoff].`
@@ -813,13 +656,10 @@ when a card name is provided; otherwise see Step 4j.
 - Examples (structure only):
     When I am dealt damage, I may discard 1 card; when I do, I Gain
     Universal Guard equal to that card's cost.
-```
 
-```other
 [Pain sharpens my resolve, and thus] when I am dealt damage, I may
     discard 1 card; when I do, I Gain Universal Guard equal to that card's
     cost.
-```
 
 1. Apply the InDesign Dictionary (Automation Keys) exactly (no synonyms):
 

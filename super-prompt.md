@@ -244,7 +244,7 @@ b) Weaving Patterns (non-exhaustive; choose what reads best):
    - Post-anchor: `Anchor Phrase [flavor], mechanical effect`
    - Mid-chain bridge: `mechanical effect -> [flavor] continuation`
    - Wrapping: `[flavor-start] mechanical text [flavor-end]`
-   - Integrated consequence: `mechanical effect -> this turn, [flavor] target's Guard, reducing it by the damage dealt.`
+   - Integrated consequence: `mechanical effect -> this turn, [source weakens] the target's Guard, reducing it by the damage dealt.`
    - Conditional/emotional: `-> [but flavor] mechanical effect`
    Invalid tailing pattern: `mechanical effect [flavor].`
 
@@ -253,8 +253,13 @@ d) Type 1 tailing-flavor ban: do not end a Type 1 segment or dependent
    follow-up with a bracket after the mechanical clause is complete.
    For dependent debuffs, put the duration first, then comma, then
    embed flavor before the affected object or state change. Preferred
-   shape: `-> this turn, [flavor] the target's Magic Guard, reducing it
+   shape: `-> this turn, [source weakens] the target's Magic Guard, reducing it
    by the damage dealt.`
+   In this shape, the bracket must be a complete subject + active
+   transitive verb whose object is the following Guard phrase. Use
+   `[the sphere's ozone disrupts] the target's Magic Guard`; do not use
+   gerund fragments like `[disrupting their arcane aura] the target's
+   Magic Guard`.
 
 #### 6.6B System B: Premise/Embedded Placement (Types 2, 3, 4)
 
@@ -342,7 +347,7 @@ Embedded system instead.
 - Base: `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as [Damage Type] damage [optional rule].`
 - Dependent follow-up: `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as [Damage Type] damage -> [duration], [flavor woven] [affected object/state], [mechanical continuation].`
 - Literal damage uses `dealing [Number] [Damage Type] damage`; `as` is only for stat formulas.
-- Guard reduction from damage dealt uses possession + reduced-by wording: `this turn, [weakening flavor] the target's Magic Guard, reducing it by the damage dealt.` Avoid per-point `suffers -1 ... for each damage dealt`.
+- Guard reduction from damage dealt uses possession + reduced-by wording: `this turn, [source weakens] the target's Magic Guard, reducing it by the damage dealt.` The bracket must grammatically act on the following Guard phrase. Avoid per-point `suffers -1 ... for each damage dealt`.
 - Canonical chain examples:
     - The Caster Launches [a crackling spear], dealing Agility as Magic damage -> [through the current left behind] Pulling themselves in a straight line to the target.
     - The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> this turn, [the orb's voltage weakens] the target's Magic Guard, reducing it by the damage dealt.
@@ -491,7 +496,7 @@ Variable strings (capitalize exactly):
 - Trigger vs Persistent: always-on/aura/while-standing-here -> Persistent; moment/event -> When/If trigger.
 - Persistent damage buff ambiguity: rewrite `deals +1 Magic damage` as `Magic damage [Subject] deals is increased by [N]`; with flavor prefer `[Flavor premise], increasing the [Damage Type] damage [Subject] deals by [N].`
 - Literal damage: `dealing [Number] [Damage Type] damage`, never `dealing [Number] as [Damage Type] damage`.
-- Damage-dealt Guard reduction: `[target]'s [Guard Type] is reduced by the damage dealt`; with chained temporary flavor use `-> this turn, [weakening flavor] the target's [Guard Type], reducing it by the damage dealt.`
+- Damage-dealt Guard reduction: `[target]'s [Guard Type] is reduced by the damage dealt`; with chained temporary flavor use `-> this turn, [source weakens] the target's [Guard Type], reducing it by the damage dealt.` The bracket must take the following Guard phrase as its object.
 - Anchor-implied single target: Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch default to `target`; do not restate implied adjacency.
 - `->` vs `and`: dependent outcome -> `->`; otherwise `and` or new sentence.
 - Out-of-dictionary synonyms: rewrite to closest exact Dictionary term.

@@ -22,6 +22,7 @@ They must be continuously refined after each user request as understanding impro
 - Avoid `so` unless explicitly requested by the user/transcript.
 - Do not use em dashes (`—`) in final card output punctuation.
 - Preserve legal grammar under strip-test requirements (mechanical rule must remain complete when brackets are removed).
+- Do not allow trailing flavor codas after complete mechanical clauses; move flavor into premise or embedded positions.
 
 ## Example usage policy
 - Do not rely on examples as the primary control mechanism.
@@ -48,6 +49,7 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, explicitly record "no rule change" in the `Learning Log`.
 
 ## Learning Log
+- 2026-05-12: Tailing flavor codas after complete mechanical clauses are no longer allowed; migrate affected rules, templates, checklist language, and examples to premise or embedded flavor, especially chained Guard reductions such as `-> this turn, [flavor] the target's Magic Guard, reducing it by the damage dealt.`
 - 2026-04-15: For literal numeric damage, omit `as` and use `dealing [Number] [Damage Type] damage`; when Guard reduction scales from damage dealt, prefer `[target]'s [Guard Type] is reduced by the damage dealt` over per-point `suffers -1 ... for each damage dealt` phrasing.
 - 2026-03-07: Duration formatting is front-loaded at clause start: `this turn [subject] [effect]`, `this round [subject] [effect]`, and `permanently [subject] [effect]`; do not use `(Current Turn)` or `(Current Round)` tags in final output.
 - 2026-03-06: Superseded by 2026-03-07 duration rule update; the prior suffix-style duration format is no longer canonical.

@@ -352,6 +352,9 @@ Embedded system instead.
 - Subject persists within a segment. Avoid repeating opening Subject; after `->`, use `it` for the most recent non-Subject entity when clear.
 - `->` only for dependent continuations. Continuation must contain mechanics, not bracket-only flavor, and must not repeat opening Subject or follow a period.
 - If a dependent continuation has both flavor and duration, put the flavor before the duration only as a causal bridge ending in `therefore` or `and thus`. Do not use loose flavor before a duration.
+- Costs are paid before flavor. When a stat is used as a cost, use
+  `Expend(s)` exactly and place the cost immediately after Subject:
+  `[Subject] Expends [amount] [Stat], [flavor] [effect].`
 - If a clause is not dependent, use `and` or a new sentence, not `->`.
 
 ##### Type 1A — Attack Action (Active Present; damage-initiating)
@@ -372,7 +375,9 @@ Embedded system instead.
 ##### Type 1C — Non-Anchor Phrase Non-Attack Action (Active Present)
 
 - Base: `[Subject] [flavor woven], [Effect].`
+- With cost: `[Subject] Expends [amount] [Stat], [flavor woven] [Effect].`
 - Dependent follow-up: `[Subject] [flavor woven], [Effect] -> [flavor/continuation woven].`
+- Costed movement example: The Caster Expends all Agility, [transforming into pure voltage] Moves in a straight line up to the Agility expended, ignoring Obstructions -> [releasing a blinding shockwave, therefore] dealing Magic damage equal to the distance Moved to each target moved through.
 - Field/Zone example: The Caster [amid silver shadow], Moves 2 tiles -> [where pale light pools] creating a Moonlit Zone at its new location. TAB Moonlit Zone: (The Occupying Hero gains +1 Agility.)
 
 #### 6.8B Type 2 — Persistent Effects
@@ -461,7 +466,7 @@ Anchor Phrase shorthand:
 Variable strings (capitalize exactly):
 - Stats: Primary, Strength, Agility, Intellect.
 - Resources: Health, Universal Guard, Physical Guard, Magic Guard, Spirit Guard, Energy, Overcharge, Arcane Power.
-- Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport.
+- Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport, Expend.
 - Zones/objects: Hand, Deck, Discard Pile, Obstructions, Bloom Token.
 - Spatial glossary: Adjacent, Surrounding, Radius X, Drift, Obstruction(s). Fields self-reference as `this location`.
 

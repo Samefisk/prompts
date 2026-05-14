@@ -58,6 +58,6 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, do not add a note.
 
 ## Recent Changes
+- 2026-05-14: For stat costs, use `Expend(s)` as the canonical cost term and place the cost before flavor immediately after the Subject.
 - 2026-05-12: For flavored duration-scoped continuations after `->`, use bracketed causal flavor before duration, ending the bracket with `therefore` or `and thus`.
 - 2026-05-12: Rewrite Section 6.6 around syntactic integration: brackets must be removable or grammatically bridge surrounding text, and no segment may end with flavor.
-- 2026-05-12: Do not keep Guard-specific flavor patterns in the general Type 1 weaving examples; rely on broad placement rules instead.

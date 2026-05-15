@@ -58,6 +58,6 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, do not add a note.
 
 ## Recent Changes
+- 2026-05-15: Add progression terminology as canonical prompt vocabulary: `Level` and `Leveling up`.
 - 2026-05-14: For stat costs, use `Expend(s)` as the canonical cost term and place the cost before flavor immediately after the Subject.
 - 2026-05-12: For flavored duration-scoped continuations after `->`, use bracketed causal flavor before duration, ending the bracket with `therefore` or `and thus`.
-- 2026-05-12: Rewrite Section 6.6 around syntactic integration: brackets must be removable or grammatically bridge surrounding text, and no segment may end with flavor.

@@ -466,6 +466,7 @@ Anchor Phrase shorthand:
 Variable strings (capitalize exactly):
 - Stats: Primary, Strength, Agility, Intellect.
 - Resources: Health, Universal Guard, Physical Guard, Magic Guard, Spirit Guard, Energy, Overcharge, Arcane Power.
+- Progression: Level, Leveling up.
 - Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport, Expend.
 - Zones/objects: Hand, Deck, Discard Pile, Obstructions, Bloom Token.
 - Spatial glossary: Adjacent, Surrounding, Radius X, Drift, Obstruction(s). Fields self-reference as `this location`.

@@ -65,7 +65,9 @@ Extract mechanics, targets/scopes, timing, durations, and any flavor; apply spok
 ### 6.2 Infer Card Type
 
 Infer silently; do not output the type.
-- Hero: innate/embodied ("I…", "my…", signature ability).
+- Hero: embodied Hero rule or listed innate Skill interaction (`I…`,
+  `my…`, signature ability). Heroes use innate Skills, not innate
+  attacks.
 - Skill: played from hand; spell/technique; may include `Response:`. Presume this if the main context is an action/ability name such as lightning bolt, meteor crash, or volt punch.
 - Arcane Item: equipment/bearer persistent effect.
 - Arcane Field: terrain/tile/location rules; reveal/occupy effects.
@@ -377,6 +379,14 @@ Embedded system instead.
 
 - Base: `[Subject] [Anchor Phrase] [flavor woven], [Effect].`
 - Dependent follow-up: `[Subject] [Anchor Phrase] [flavor woven], [Effect] -> [flavor woven] [Follow-Up].`
+- Innate Skill storage pattern: `I may activate an Allied "[Card Name]"
+  on the Field with modified targeting; it Launches as a piercing
+  projectile that targets me -> [case-specific pickup flavor,
+  therefore] I take no Damage and I store it as an innate Skill.`
+- Ionized Orb example: I may activate an Allied "Ionized Orb" on the
+  Field with modified targeting; it Launches as a piercing projectile
+  that targets me -> [catching the orb and drawing in its charge,
+  therefore] I take no Damage and I store it as an innate Skill.
 
 ##### Type 1C — Non-Anchor Phrase Non-Attack Action (Active Present)
 
@@ -473,8 +483,15 @@ Variable strings (capitalize exactly):
 - Stats: Primary, Strength, Agility, Intellect.
 - Resources: Health, Universal Guard, Physical Guard, Magic Guard, Spirit Guard, Energy, Overcharge, Arcane Power.
 - Progression: Level, Leveling up.
+- Innate terms: Innate Skill. Heroes have innate Skills, not innate
+  attacks. Use `I store it as an innate Skill` when a Hero gains/stores
+  a Skill this way.
 - Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport, Expend.
 - Zones/objects: Hand, Deck, Discard Pile, Obstructions, Bloom Token.
+- Named card references: when a specific card is named in card text,
+  wrap the card name in quotes, e.g., `Allied "Ionized Orb"`. Do not
+  quote generic object terms such as `Bloom Token` unless they are used
+  as specific card names.
 - Spatial glossary: Adjacent, Surrounding, Radius X, Drift, Obstruction(s). Fields self-reference as `this location`.
 
 ### 6.10 Enforce Neutrality & Ownership (System cards)

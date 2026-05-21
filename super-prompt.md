@@ -348,6 +348,10 @@ Embedded system instead.
 - Anchor Phrase must be listed in the Dictionary and appear immediately after Subject.
 - Flavor uses Story Flavor; brackets must fit the card/mechanic and contain no mechanics, numbers, ranges, targeting logic, or glossary math.
 - Fields/Zones: action creates the aura at the hit/touched/called location; output its rules as a second TAB segment. Field = larger area; Zone = card tile.
+- Skill-lingers-as-Field: when a Skill turns itself into a lingering
+  Field after resolving, use `this Skill lingers as a [Field Name] at
+  [location].` The named Field's rules are listed as the next
+  TAB-separated segment: `[Field Name]: ([rules].)`
 - Anchor-implied single target: Punch/Bite/Claw/Gouge/Ram/Maul/Kick/Touch default to `target`; do not restate implied adjacency/range.
 - Subject persists within a segment. Avoid repeating opening Subject; after `->`, use `it` for the most recent non-Subject entity when clear.
 - `->` only for dependent continuations. Continuation must contain mechanics, not bracket-only flavor, and must not repeat opening Subject or follow a period.
@@ -363,9 +367,11 @@ Embedded system instead.
 - Dependent follow-up: `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as [Damage Type] damage -> [consequence flavor, therefore] [duration], [subject] [effect].`
 - Literal damage uses `dealing [Number] [Damage Type] damage`; `as` is only for stat formulas.
 - Guard reduction from damage dealt uses scoped passive wording: `[consequence flavor, therefore] this turn, the target's Magic Guard is reduced by the damage dealt.` Avoid per-point `suffers -1 ... for each damage dealt`.
+- Lingering Field follow-up: `[Subject] [Anchor Phrase] [flavor woven], dealing [Stat] as [Damage Type] damage -> [flavor woven] this Skill lingers as a/an [Field Name] at the target's location. TAB [Field Name]: ([rules].)`
 - Canonical chain examples:
     - The Caster Launches [a crackling spear], dealing Agility as Magic damage -> [through the current left behind] Pulling themselves in a straight line to the target.
     - The Caster Slings [an orb of ionizing electricity], dealing 1 Magic damage -> [the orb's voltage corrodes its aura, therefore] this turn, the target's Magic Guard is reduced by the damage dealt.
+    - The Caster Slings [an orb of ionizing electricity], dealing Strength as Magic damage -> [as the current grounds itself] this Skill lingers as an Ionized Field at the target's location. TAB Ionized Field: (Surrounding Heroes suffer -1 Magic Guard.)
 
 ##### Type 1B — Anchor Phrase Non-Attack Action (Active Present)
 

@@ -486,7 +486,7 @@ Variable strings (capitalize exactly):
 - Innate terms: Innate Skill. Heroes have innate Skills, not innate
   attacks. Use `I store it as an innate Skill` when a Hero gains/stores
   a Skill this way.
-- Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport, Expend.
+- Game Actions: Move, Attune, Reveal, Deploy, Banishes, Spawn, Teleport, Expend, Charge.
 - Zones/objects: Hand, Deck, Discard Pile, Obstructions, Bloom Token.
 - Named card references: when a specific card is named in card text,
   wrap the card name in quotes, e.g., `Allied "Ionized Orb"`. Do not

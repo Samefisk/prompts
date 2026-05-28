@@ -58,6 +58,6 @@ They must be continuously refined after each user request as understanding impro
 - If no durable new learning exists for a request, do not add a note.
 
 ## Recent Changes
+- 2026-05-28: Add `Charge` as a canonical Game Action keyword; use it for the action where a Hero/Caster charges.
 - 2026-05-21: Named card references in card text use quotes; Heroes use `Innate Skill` terminology instead of innate attacks.
 - 2026-05-21: When a Skill becomes a lingering Field, use `this Skill lingers as a [Field Name] at [location]`; put the Field rules in the next TAB segment.
-- 2026-05-15: Add progression terminology as canonical prompt vocabulary: `Level` and `Leveling up`.

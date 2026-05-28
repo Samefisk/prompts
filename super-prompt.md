@@ -474,7 +474,7 @@ Anchor Phrase shorthand:
 - Melee Physical Attack, 1 tile Cardinal: Punch, Bite, Claw, Gouge, Ram, Maul.
 - Melee Physical Attack, 1 tile cardinal & diagonal: Kick.
 - Melee Magic/Spirit, 1 tile Cardinal: Touch (Attack or non-attack).
-- Ranged Magic/Spirit Projectile: Sling up to 2 tiles; Launch unlimited.
+- Ranged Magic/Spirit Projectile: Sling up to 2 tiles; Fire 1-3 tiles in a straight line; Launch unlimited.
 - Ranged Magic/Spirit Distant: Unleash a sky-born x (Attack); Call Down (Non-Attack).
 - Supplementary movement before main action: Lunge, Pounce.
 - Piercing projectile supplement: Beam.
